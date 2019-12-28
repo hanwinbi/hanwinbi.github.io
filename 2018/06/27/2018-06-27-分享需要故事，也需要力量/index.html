@@ -230,19 +230,20 @@ var _hmt = _hmt || [];
         <h3 class="title is-5 has-text-weight-normal">评论</h3>
         
 <div id="comment-container"></div>
-<link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">
-<script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1.4.1/dist/gitalk.css">
+<script src="https://cdn.jsdelivr.net/npm/gitalk@1.4.1/dist/gitalk.min.js"></script>
 <script>
-	var gitment = new Gitment({
-		id: 'd4352af8debc2495c2da775a10e6bd86',
-		owner: 'hanwinbi',
-		repo: 'blog_comments',
-		oauth: {
-			client_id: '50f1364eb8bec40153cf',
-			client_secret: 'a13f1f7be1c6706c6935a3621b4f2ceadd2e9cb3',
-		},
-	})
-	gitment.render('comment-container')
+    var gitalk = new Gitalk({
+        clientID: '50f1364eb8bec40153cf',
+        clientSecret: 'a13f1f7be1c6706c6935a3621b4f2ceadd2e9cb3',
+        id: 'd4352af8debc2495c2da775a10e6bd86',
+        repo: 'blog_comments',
+        owner: 'hanwinbi',
+        admin: "hanwinbi",
+        createIssueManually: false,
+        distractionFreeMode: false
+    })
+    gitalk.render('comment-container')
 </script>
 
     </div>
