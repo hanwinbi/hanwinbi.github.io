@@ -1,0 +1,987 @@
+<!DOCTYPE html>
+<html  lang="ch">
+<head>
+    <meta charset="utf-8" />
+
+<meta name="generator" content="Hexo 4.2.0" />
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+
+<title>Hexo本地博客 - Hanwin`s Blog</title>
+
+
+    <meta name="description" content="我的第一个博客搭建与2016年，那时候才大一，也是跟着教程一起来的，三年过去了，早已经忘得不止东南西北了。考完试了，还是想把属于自己的小天地搭建起来，whatever，我的地盘我做主。 博客主题来源 以下搭建过程是我在进行本地预览的过程，为了避免以后重新设置的时候忘记，所以记录下来了。来源">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Hexo本地博客">
+<meta property="og:url" content="https://www.hanwinbi.github.io/2019/12/28/Hexo%E5%8D%9A%E5%AE%A2%E6%9C%AC%E5%9C%B0%E6%90%AD%E5%BB%BA/index.html">
+<meta property="og:site_name" content="Hanwin&#96;s Blog">
+<meta property="og:description" content="我的第一个博客搭建与2016年，那时候才大一，也是跟着教程一起来的，三年过去了，早已经忘得不止东南西北了。考完试了，还是想把属于自己的小天地搭建起来，whatever，我的地盘我做主。 博客主题来源 以下搭建过程是我在进行本地预览的过程，为了避免以后重新设置的时候忘记，所以记录下来了。来源">
+<meta property="og:locale" content="ch_CN">
+<meta property="og:image" content="https://www.hanwinbi.github.io/thumbnails/2019-12-27.jpg">
+<meta property="article:published_time" content="2019-12-27T16:00:00.000Z">
+<meta property="article:modified_time" content="2019-12-28T06:41:30.000Z">
+<meta property="article:author" content="Hanwin">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://www.hanwinbi.github.io/thumbnails/2019-12-27.jpg">
+
+
+
+
+
+
+
+<link rel="icon" href="/images/favicon.svg">
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.7.2/css/bulma.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu:400,600|Source+Code+Pro">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@9.12.0/styles/atom-one-light.css">
+
+
+    
+    
+<style>body>.footer,body>.navbar,body>.section{opacity:0}</style>
+
+    
+    
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@1.6.8/dist/css/lightgallery.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/justifiedGallery@3.7.0/dist/css/justifiedGallery.min.css">
+
+    
+    
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/outdatedbrowser@1.1.5/outdatedbrowser/outdatedbrowser.min.css">
+
+    
+    
+    
+    
+<link rel="stylesheet" href="/css/back-to-top.css">
+
+    
+    
+    
+    <script>
+var _hmt = _hmt || [];
+(function() {
+    var hm = document.createElement("script");
+    hm.src = "//hm.baidu.com/hm.js?ac4cf227d6238bc4bc670edb7dda8e02";
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(hm, s);
+})();
+</script>
+    
+    
+    
+    <link rel="stylesheet" href="/css/progressbar.css">
+<script src="https://cdn.jsdelivr.net/npm/pace-js@1.0.2/pace.min.js"></script>
+    
+    
+    
+
+
+<link rel="stylesheet" href="/css/style.css">
+</head>
+<body class="is-3-column">
+    <nav class="navbar navbar-main">
+    <div class="container">
+        <div class="navbar-brand is-flex-center">
+            <a class="navbar-item navbar-logo" href="/">
+            
+                <img src="/images/logo.svg" alt="Hexo本地博客" height="28">
+            
+            </a>
+        </div>
+        <div class="navbar-menu">
+            
+            <div class="navbar-start">
+                
+                <a class="navbar-item"
+                href="/">Home</a>
+                
+                <a class="navbar-item"
+                href="/archives">Archives</a>
+                
+                <a class="navbar-item"
+                href="/categories">Categories</a>
+                
+                <a class="navbar-item"
+                href="/tags">Tags</a>
+                
+                <a class="navbar-item"
+                href="/about">About</a>
+                
+            </div>
+            
+            <div class="navbar-end">
+                
+                    
+                    <a class="navbar-item" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/hanwinbi">
+                        
+                        <i class="fab fa-github"></i>
+                        
+                    </a>
+                    
+                
+                
+                
+                <a class="navbar-item search" title="Search" href="javascript:;">
+                    <i class="fas fa-search"></i>
+                </a>
+                
+            </div>
+        </div>
+    </div>
+</nav>
+    
+    <section class="section">
+        <div class="container">
+            <div class="columns">
+                <div class="column is-8-tablet is-8-desktop is-6-widescreen has-order-2 column-main">
+<div class="card">
+    
+    <div class="card-image">
+        <span  class="image is-7by1">
+            <img class="thumbnail" src="/./thumbnails/2019-12-27.jpg" alt="Hexo本地博客">
+        </span>
+    </div>
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2019-12-27T16:00:00.000Z">2019-12-28</time>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    7 minutes read (About 981 words)
+                </span>
+                
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                Hexo本地博客
+            
+        </h1>
+        <div class="content">
+            <p>我的第一个博客搭建与2016年，那时候才大一，也是跟着教程一起来的，三年过去了，早已经忘得不止东南西北了。考完试了，还是想把属于自己的小天地搭建起来，whatever，我的地盘我做主。</p>
+<p><a href="https://blog.zhangruipeng.me/hexo-theme-icarus/uncategorized/getting-started-with-icarus/">博客主题来源</a></p>
+<p>以下搭建过程是我在进行本地预览的过程，为了避免以后重新设置的时候忘记，所以记录下来了。<a href="https://juejin.im/post/5cef68415188253fed710994">来源</a></p>
+<a id="more"></a>
+<h1 id="安装Node-js"><a href="#安装Node-js" class="headerlink" title="安装Node.js"></a>安装Node.js</h1><p>这个应为我在很早以前就配置好了环境，所以没换时间。写的过程中特地去搜了一下，<del>一步到胃</del>，咳咳，一步到位。<br>    1.检查是否安装过homebrew，没有安装的安装命令如下<br>    <code>ruby -e &quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)&quot;</code><br>    2.安装node<br>    <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">brew link node</span><br><span class="line">brew uninstall node&#x2F;&#x2F;删除node，如果已经安装过会产生冲突</span><br><span class="line">brew install node</span><br></pre></td></tr></table></figure><br>    检查是否安装完成<code>npm -v</code>、<code>node -v</code><br>    npm由于源服务器在国外下载node包经常超时，cnpm使用国内镜像，通过以下命令安装cnpm<br>    <code>npm install -g cnpm --registry=https://registry.npm.taobao.org</code><br>    Nice done！</p>
+<h1 id="通过npm安装Hexo框架"><a href="#通过npm安装Hexo框架" class="headerlink" title="通过npm安装Hexo框架"></a>通过npm安装Hexo框架</h1><p>1.前提是第一步已经完成了<br><code>npm install -g hexo-cli</code>，可以用<code>hexo -v</code>查看版本号<br>2.创建一个空目录，cd到这个目录，然后要开始了！<br>输入<code>hexo init</code>初始化博客，用<code>hexo new “BlogName”</code>新建文章<br>3.生成静态文件<br><code>hexo g</code>（g代表generate），生成博客静态文件<br>每次修改文章后，都需要通过<code>hexo clean</code>清理一下，<br>然后通过<code>hexo g</code>重新生成，<br>最后也不要忘了通过<code>hexo s</code>重新启动Hexo。<br>4.启动<br><code>hexo s</code>，根据提示访问本地网页<br>5.更换主题<br>把下载的主题直接放在theme目录下，或者cd到theme目录，然后<code>git clone</code>也行啊。然后在_config.yml文件夹中Ctrl+F找到theme，换成你自己的主题的名字。<br>每次修改主题后，都需要通过<code>hexo clean</code>清理一下，<br>然后通过<code>hexo g</code>重新生成，<br>最后也不要忘了通过<code>hexo s</code>重新启动Hexo。</p>
+<h1 id="使用Gitment评论系统"><a href="#使用Gitment评论系统" class="headerlink" title="使用Gitment评论系统"></a><a href="https://cloud.tencent.com/developer/article/1491022">使用Gitment评论系统</a></h1><p>开始<br>第一步 注册 OAuth Application</p>
+<p>首先在点击这里注册自己OAuth Application，</p>
+<p>此处有四个内容：</p>
+<p>Application name： 随意填写undefinedHomepage URL: 随意填写一个urlundefinedApplication description: 随意填写undefinedAuthorization callback URL: 填你的博客网址（例: <a href="https://user.github.io/blog/），如果有域名则填域名。">https://user.github.io/blog/），如果有域名则填域名。</a><br>注册完后你会得到一个 client ID 和一个 client secret，记住这两个玩意，等会hexo配置会用到</p>
+<p>第二步 安装Gitment</p>
+<p>在你的博客下使用npm进行安装gitment</p>
+<p>$ npm install –save gitment<br>第三步 修改主题配置</p>
+<p>因为这里我使用的是Next主题配置，在配置文件搜索关键字gitment,主要配置如下：</p>
+<p>gitment:<br>  enable: true //这里必须为开启<br>  …<br>  github_user: username<br>  github_repo: blog_comments #新建一个存储评论的仓库，这里填写仓库名<br>  client_id: #第一步注册的client_id<br>  client_secret: #第一步注册的client_secret<br>  …<br>github_user不知道是哪个？你在github页面中，点击你的头像看到第一行显示signed in as xxx，</p>
+<p>就是填写这个xxx。github_repo这里是让你再新建一个仓库，用来存储评论的，不是当前的这个博客的仓库，</p>
+<p>然后填上你仓库名的名字，对！就是单纯的名字，仓库名叫blog_comments就填blog_comments。</p>
+<p>第四步 初始化评论插件</p>
+<p>搞定好以上的步骤后，你就能看到博客的下方是这样的</p>
+<h1 id="统计"><a href="#统计" class="headerlink" title="统计"></a>统计</h1><p><a href="https://tongji.baidu.com/web/10000125546/homepage/index">https://tongji.baidu.com/web/10000125546/homepage/index</a></p>
+
+        </div>
+        
+        
+        
+    </div>
+</div>
+
+
+
+
+
+<div class="card card-transparent">
+    <div class="level post-navigation is-flex-wrap is-mobile">
+        
+        
+        <div class="level-end">
+            <a class="level level-item has-link-grey  article-nav-next" href="/2019/12/27/hello-world/">
+                <span class="level-item">Hello World</span>
+                <i class="level-item fas fa-chevron-right"></i>
+            </a>
+        </div>
+        
+    </div>
+</div>
+
+
+
+<div class="card">
+    <div class="card-content">
+        <h3 class="title is-5 has-text-weight-normal">Comments</h3>
+        
+<div id="comment-container"></div>
+<link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">
+<script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script>
+<script>
+	var gitment = new Gitment({
+		id: '822cc04c18273644745f2d9651e9cf21',
+		owner: 'hanwinbi',
+		repo: 'blog_comments',
+		oauth: {
+			client_id: '50f1364eb8bec40153cf',
+			client_secret: 'a13f1f7be1c6706c6935a3621b4f2ceadd2e9cb3',
+		},
+	})
+	gitment.render('comment-container')
+</script>
+
+    </div>
+</div>
+</div>
+                
+
+
+
+
+<div class="column is-4-tablet is-4-desktop is-3-widescreen  has-order-1 column-left ">
+    
+        
+<div class="card widget">
+    <div class="card-content">
+        <nav class="level">
+            <div class="level-item has-text-centered" style="flex-shrink: 1">
+                <div>
+                    
+                    <figure class="image is-128x128 has-mb-6">
+                        <img class="is-rounded" src="/images/hanwin.png" alt="Hanwin">
+                    </figure>
+                    
+                    <p class="is-size-4 is-block">
+                        Hanwin
+                    </p>
+                    
+                    
+                    <p class="is-size-6 is-block">
+                        Hanwin
+                    </p>
+                    
+                    
+                    <p class="is-size-6 is-flex is-flex-center has-text-grey">
+                        <i class="fas fa-map-marker-alt has-mr-7"></i>
+                        <span>ChangSha,China</span>
+                    </p>
+                    
+                </div>
+            </div>
+        </nav>
+        <nav class="level is-mobile">
+            <div class="level-item has-text-centered is-marginless">
+                <div>
+                    <p class="heading">
+                        Posts
+                    </p>
+                    <a href="/archives">
+                        <p class="title has-text-weight-normal">
+                            7
+                        </p>
+                    </a>
+                </div>
+            </div>
+            <div class="level-item has-text-centered is-marginless">
+                <div>
+                    <p class="heading">
+                        Categories
+                    </p>
+                    <a href="/categories">
+                        <p class="title has-text-weight-normal">
+                            2
+                        </p>
+                    </a>
+                </div>
+            </div>
+            <div class="level-item has-text-centered is-marginless">
+                <div>
+                    <p class="heading">
+                        Tags
+                    </p>
+                    <a href="/tags">
+                        <p class="title has-text-weight-normal">
+                            0
+                        </p>
+                    </a>
+                </div>
+            </div>
+        </nav>
+        
+        <div class="level">
+            <a class="level-item button is-link is-rounded" href="https://github.com/hanwinbi" target="_blank" rel="noopener">
+                Follow</a>
+        </div>
+        
+        
+        
+        <div class="level is-mobile">
+            
+            <a class="level-item button is-white is-marginless" target="_blank" rel="noopener"
+                title="Github" href="https://github.com/hanwinbi">
+                
+                <i class="fab fa-github"></i>
+                
+            </a>
+            
+            <a class="level-item button is-white is-marginless" target="_blank" rel="noopener"
+                title="Facebook" href="https://weibo.com/u/2708201663/home">
+                
+                <i class="fab fa-weibo"></i>
+                
+            </a>
+            
+        </div>
+        
+    </div>
+</div>
+    
+        
+    
+        <div class="card widget">
+    <div class="card-content">
+        <div class="menu">
+        <h3 class="menu-label">
+            Links
+        </h3>
+        <ul class="menu-list">
+        
+            <li>
+                <a class="level is-mobile" href="https://hexo.io" target="_blank" rel="noopener">
+                    <span class="level-left">
+                        <span class="level-item">Hexo</span>
+                    </span>
+                    <span class="level-right">
+                        <span class="level-item tag">hexo.io</span>
+                    </span>
+                </a>
+            </li>
+        
+            <li>
+                <a class="level is-mobile" href="https://github.com/hanwinbi" target="_blank" rel="noopener">
+                    <span class="level-left">
+                        <span class="level-item">Hanwinbi</span>
+                    </span>
+                    <span class="level-right">
+                        <span class="level-item tag">github.com</span>
+                    </span>
+                </a>
+            </li>
+        
+        </ul>
+        </div>
+    </div>
+</div>
+
+    
+        
+<div class="card widget">
+    <div class="card-content">
+        <div class="menu">
+            <h3 class="menu-label">
+                Categories
+            </h3>
+            <ul class="menu-list">
+            <li>
+        <a class="level is-marginless" href="/categories/Untiy/">
+            <span class="level-start">
+                <span class="level-item">Untiy</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">1</span>
+            </span>
+        </a></li><li>
+        <a class="level is-marginless" href="/categories/life/">
+            <span class="level-start">
+                <span class="level-item">life</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">4</span>
+            </span>
+        </a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+    
+        
+    
+    
+        <div class="column-right-shadow is-hidden-widescreen ">
+        
+            <div class="card widget">
+    <div class="card-content">
+        <h3 class="menu-label">
+            Recent
+        </h3>
+        
+        <article class="media">
+            
+            <a href="/2019/12/28/Hexo%E5%8D%9A%E5%AE%A2%E6%9C%AC%E5%9C%B0%E6%90%AD%E5%BB%BA/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/./thumbnails/2019-12-27.jpg" alt="Hexo本地博客">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-12-27T16:00:00.000Z">2019-12-28</time></div>
+                    <a href="/2019/12/28/Hexo%E5%8D%9A%E5%AE%A2%E6%9C%AC%E5%9C%B0%E6%90%AD%E5%BB%BA/" class="title has-link-black-ter is-size-6 has-text-weight-normal">Hexo本地博客</a>
+                    <p class="is-size-7 is-uppercase">
+                        
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/2019/12/27/hello-world/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="Hello World">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-12-27T03:36:11.000Z">2019-12-27</time></div>
+                    <a href="/2019/12/27/hello-world/" class="title has-link-black-ter is-size-6 has-text-weight-normal">Hello World</a>
+                    <p class="is-size-7 is-uppercase">
+                        
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/2018/06/27/2018-06-27-%E5%88%86%E4%BA%AB%E9%9C%80%E8%A6%81%E6%95%85%E4%BA%8B%EF%BC%8C%E4%B9%9F%E9%9C%80%E8%A6%81%E5%8A%9B%E9%87%8F/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/./thumbnails/2018-6-27.jpg" alt="分享需要故事，也需要力量">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2018-06-27T14:23:00.000Z">2018-06-27</time></div>
+                    <a href="/2018/06/27/2018-06-27-%E5%88%86%E4%BA%AB%E9%9C%80%E8%A6%81%E6%95%85%E4%BA%8B%EF%BC%8C%E4%B9%9F%E9%9C%80%E8%A6%81%E5%8A%9B%E9%87%8F/" class="title has-link-black-ter is-size-6 has-text-weight-normal">分享需要故事，也需要力量</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/Untiy/">Untiy</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/2018/06/17/2018-06-17-%E5%86%99%E7%BB%99%E8%80%81%E7%88%B6%E4%BA%B2/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="写给父亲">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2018-06-17T12:59:00.000Z">2018-06-17</time></div>
+                    <a href="/2018/06/17/2018-06-17-%E5%86%99%E7%BB%99%E8%80%81%E7%88%B6%E4%BA%B2/" class="title has-link-black-ter is-size-6 has-text-weight-normal">写给父亲</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/life/">life</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/2017/08/09/2017-08-09-%E8%80%81%E5%8F%8B%EF%BC%8C%E5%B0%8F%E7%9B%96/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/./thumbnails/2017-8-9.jpg" alt="老友，小盖">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2017-08-09T05:13:00.000Z">2017-08-09</time></div>
+                    <a href="/2017/08/09/2017-08-09-%E8%80%81%E5%8F%8B%EF%BC%8C%E5%B0%8F%E7%9B%96/" class="title has-link-black-ter is-size-6 has-text-weight-normal">老友，小盖</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/life/">life</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+    </div>
+</div>
+        
+            <div class="card widget">
+    <div class="card-content">
+        <div class="menu">
+        <h3 class="menu-label">
+            Archives
+        </h3>
+        <ul class="menu-list">
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2019/12/">
+                <span class="level-start">
+                    <span class="level-item">December 2019</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">2</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2018/06/">
+                <span class="level-start">
+                    <span class="level-item">June 2018</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">2</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2017/08/">
+                <span class="level-start">
+                    <span class="level-item">August 2017</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">1</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2017/05/">
+                <span class="level-start">
+                    <span class="level-item">May 2017</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">1</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2016/12/">
+                <span class="level-start">
+                    <span class="level-item">December 2016</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">1</span>
+                </span>
+            </a>
+        </li>
+        
+        </ul>
+        </div>
+    </div>
+</div>
+        
+            <div class="card widget">
+    <div class="card-content">
+        <div class="menu">
+            <h3 class="menu-label">
+                Tags
+            </h3>
+            <div class="field is-grouped is-grouped-multiline">
+                
+            </div>
+        </div>
+    </div>
+</div>
+        
+        </div>
+    
+</div>
+
+                
+
+
+
+
+<div class="column is-4-tablet is-4-desktop is-3-widescreen is-hidden-touch is-hidden-desktop-only has-order-3 column-right ">
+    
+        <div class="card widget">
+    <div class="card-content">
+        <h3 class="menu-label">
+            Recent
+        </h3>
+        
+        <article class="media">
+            
+            <a href="/2019/12/28/Hexo%E5%8D%9A%E5%AE%A2%E6%9C%AC%E5%9C%B0%E6%90%AD%E5%BB%BA/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/./thumbnails/2019-12-27.jpg" alt="Hexo本地博客">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-12-27T16:00:00.000Z">2019-12-28</time></div>
+                    <a href="/2019/12/28/Hexo%E5%8D%9A%E5%AE%A2%E6%9C%AC%E5%9C%B0%E6%90%AD%E5%BB%BA/" class="title has-link-black-ter is-size-6 has-text-weight-normal">Hexo本地博客</a>
+                    <p class="is-size-7 is-uppercase">
+                        
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/2019/12/27/hello-world/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="Hello World">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-12-27T03:36:11.000Z">2019-12-27</time></div>
+                    <a href="/2019/12/27/hello-world/" class="title has-link-black-ter is-size-6 has-text-weight-normal">Hello World</a>
+                    <p class="is-size-7 is-uppercase">
+                        
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/2018/06/27/2018-06-27-%E5%88%86%E4%BA%AB%E9%9C%80%E8%A6%81%E6%95%85%E4%BA%8B%EF%BC%8C%E4%B9%9F%E9%9C%80%E8%A6%81%E5%8A%9B%E9%87%8F/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/./thumbnails/2018-6-27.jpg" alt="分享需要故事，也需要力量">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2018-06-27T14:23:00.000Z">2018-06-27</time></div>
+                    <a href="/2018/06/27/2018-06-27-%E5%88%86%E4%BA%AB%E9%9C%80%E8%A6%81%E6%95%85%E4%BA%8B%EF%BC%8C%E4%B9%9F%E9%9C%80%E8%A6%81%E5%8A%9B%E9%87%8F/" class="title has-link-black-ter is-size-6 has-text-weight-normal">分享需要故事，也需要力量</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/Untiy/">Untiy</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/2018/06/17/2018-06-17-%E5%86%99%E7%BB%99%E8%80%81%E7%88%B6%E4%BA%B2/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="写给父亲">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2018-06-17T12:59:00.000Z">2018-06-17</time></div>
+                    <a href="/2018/06/17/2018-06-17-%E5%86%99%E7%BB%99%E8%80%81%E7%88%B6%E4%BA%B2/" class="title has-link-black-ter is-size-6 has-text-weight-normal">写给父亲</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/life/">life</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/2017/08/09/2017-08-09-%E8%80%81%E5%8F%8B%EF%BC%8C%E5%B0%8F%E7%9B%96/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/./thumbnails/2017-8-9.jpg" alt="老友，小盖">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2017-08-09T05:13:00.000Z">2017-08-09</time></div>
+                    <a href="/2017/08/09/2017-08-09-%E8%80%81%E5%8F%8B%EF%BC%8C%E5%B0%8F%E7%9B%96/" class="title has-link-black-ter is-size-6 has-text-weight-normal">老友，小盖</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/life/">life</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+    </div>
+</div>
+    
+        <div class="card widget">
+    <div class="card-content">
+        <div class="menu">
+        <h3 class="menu-label">
+            Archives
+        </h3>
+        <ul class="menu-list">
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2019/12/">
+                <span class="level-start">
+                    <span class="level-item">December 2019</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">2</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2018/06/">
+                <span class="level-start">
+                    <span class="level-item">June 2018</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">2</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2017/08/">
+                <span class="level-start">
+                    <span class="level-item">August 2017</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">1</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2017/05/">
+                <span class="level-start">
+                    <span class="level-item">May 2017</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">1</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2016/12/">
+                <span class="level-start">
+                    <span class="level-item">December 2016</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">1</span>
+                </span>
+            </a>
+        </li>
+        
+        </ul>
+        </div>
+    </div>
+</div>
+    
+        <div class="card widget">
+    <div class="card-content">
+        <div class="menu">
+            <h3 class="menu-label">
+                Tags
+            </h3>
+            <div class="field is-grouped is-grouped-multiline">
+                
+            </div>
+        </div>
+    </div>
+</div>
+    
+    
+</div>
+
+            </div>
+        </div>
+    </section>
+    <footer class="footer">
+    <div class="container">
+        <div class="level">
+            <div class="level-start has-text-centered-mobile">
+                <a class="footer-logo is-block has-mb-6" href="/">
+                
+                    <img src="/images/logo.svg" alt="Hexo本地博客" height="28">
+                
+                </a>
+                <p class="is-size-7">
+                &copy; 2019 Hanwin&nbsp;
+                Powered by <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a> & <a
+                        href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank" rel="noopener">Icarus</a>
+                
+                </p>
+            </div>
+            <div class="level-end">
+            
+                <div class="field has-addons is-flex-center-mobile has-mt-5-mobile is-flex-wrap is-flex-middle">
+                
+                <p class="control">
+                    <a class="button is-white is-large" target="_blank" rel="noopener" title="Creative Commons" href="https://creativecommons.org/">
+                        
+                        <i class="fab fa-creative-commons"></i>
+                        
+                    </a>
+                </p>
+                
+                <p class="control">
+                    <a class="button is-white is-large" target="_blank" rel="noopener" title="Attribution 4.0 International" href="https://creativecommons.org/licenses/by/4.0/">
+                        
+                        <i class="fab fa-creative-commons-by"></i>
+                        
+                    </a>
+                </p>
+                
+                <p class="control">
+                    <a class="button is-white is-large" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/hanwinbi">
+                        
+                        <i class="fab fa-github"></i>
+                        
+                    </a>
+                </p>
+                
+                </div>
+            
+            </div>
+        </div>
+    </div>
+</footer>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/min/moment-with-locales.min.js"></script>
+<script>moment.locale("ch-CN");</script>
+
+
+<script>
+var IcarusThemeSettings = {
+    site: {
+        url: 'https://www.hanwinbi.github.io',
+        external_link: {"enable":true,"exclude":[]}
+    },
+    article: {
+        highlight: {
+            clipboard: true,
+            fold: 'unfolded'
+        }
+    }
+};
+</script>
+
+
+<script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.min.js" defer></script>
+
+
+
+
+
+<script src="/js/animation.js"></script>
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/lightgallery@1.6.8/dist/js/lightgallery.min.js" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.7.0/dist/js/jquery.justifiedGallery.min.js" defer></script>
+<script src="/js/gallery.js" defer></script>
+
+
+
+<div id="outdated">
+    <h6>Your browser is out-of-date!</h6>
+    <p>Update your browser to view this website correctly. <a id="btnUpdateBrowser" href="http://outdatedbrowser.com/">Update
+            my browser now </a></p>
+    <p class="last"><a href="#" id="btnCloseUpdateBrowser" title="Close">&times;</a></p>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/outdatedbrowser@1.1.5/outdatedbrowser/outdatedbrowser.min.js" defer></script>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        outdatedBrowser({
+            bgColor: '#f25648',
+            color: '#ffffff',
+            lowerThan: 'flex'
+        });
+    });
+</script>
+
+
+<script src="https://cdn.jsdelivr.net/npm/mathjax@2.7.5/unpacked/MathJax.js?config=TeX-MML-AM_CHTML" defer></script>
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    MathJax.Hub.Config({
+        'HTML-CSS': {
+            matchFontHeight: false
+        },
+        SVG: {
+            matchFontHeight: false
+        },
+        CommonHTML: {
+            matchFontHeight: false
+        },
+        tex2jax: {
+            inlineMath: [
+                ['$','$'],
+                ['\\(','\\)']
+            ]
+        }
+    });
+});
+</script>
+
+
+<a id="back-to-top" title="Back to Top" href="javascript:;">
+    <i class="fas fa-chevron-up"></i>
+</a>
+<script src="/js/back-to-top.js" defer></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script src="/js/main.js" defer></script>
+
+    
+    <div class="searchbox ins-search">
+    <div class="searchbox-container ins-search-container">
+        <div class="searchbox-input-wrapper">
+            <input type="text" class="searchbox-input ins-search-input" placeholder="Type something..." />
+            <span class="searchbox-close ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="searchbox-result-wrapper ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+    (function (window) {
+        var INSIGHT_CONFIG = {
+            TRANSLATION: {
+                POSTS: 'Posts',
+                PAGES: 'Pages',
+                CATEGORIES: 'Categories',
+                TAGS: 'Tags',
+                UNTITLED: '(Untitled)',
+            },
+            CONTENT_URL: '/content.json',
+        };
+        window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+    })(window);
+</script>
+<script src="/js/insight.js" defer></script>
+<link rel="stylesheet" href="/css/search.css">
+<link rel="stylesheet" href="/css/insight.css">
+    
+</body>
+</html>
