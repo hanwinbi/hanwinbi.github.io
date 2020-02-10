@@ -19,7 +19,7 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://www.hanwinbi.github.io/images/og_image.png">
 <meta property="article:published_time" content="2020-02-09T16:00:00.000Z">
-<meta property="article:modified_time" content="2020-02-10T14:46:07.988Z">
+<meta property="article:modified_time" content="2020-02-10T16:38:18.290Z">
 <meta property="article:author" content="Hanwin">
 <meta property="article:tag" content="markdown">
 <meta name="twitter:card" content="summary">
@@ -159,7 +159,7 @@ var _hmt = _hmt || [];
                 <span class="level-item has-text-grey">
                     
                     
-                    5 分钟 读完 (大约 796 个字)
+                    7 分钟 读完 (大约 1026 个字)
                 </span>
                 
                 
@@ -231,7 +231,7 @@ var _hmt = _hmt || [];
 </code></pre>
 <h1 id="6链接地址"><a class="markdownIt-Anchor" href="#6链接地址"></a> 6.链接地址</h1>
 <p>使用 [写入需要链接的文字](需要链接的地址) 作为行内链接方式<br />
-<a href="hanwinbi.github.io">Hanwi的个人博客</a></p>
+<a href="hanwinbi.github.io">Hanwin的个人博客</a></p>
 <p>使用 [这里添入链接文字][链接标记1]、[这里添入链接文字][链接标记2]作为参考式使用<br />
 链接地址放在最后一行<br />
 [链接标记1]: <a href="http://hanwinbi.github.io">hanwinbi.github.io</a><br />
@@ -277,8 +277,25 @@ var _hmt = _hmt || [];
 </tbody>
 </table>
 <h1 id="11latex公式"><a class="markdownIt-Anchor" href="#11latex公式"></a> 11.LaTeX公式</h1>
-<p>使用 <code>$</code> 表示行内公式，例如质能方程：<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>E</mi><mo>=</mo><mi>m</mi><msup><mi>c</mi><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">E=mc^2</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.05764em;">E</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.8141079999999999em;vertical-align:0em;"></span><span class="mord mathdefault">m</span><span class="mord"><span class="mord mathdefault">c</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141079999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span></span></span></span></p>
-<p><a href="https://math.meta.stackexchange.com/questions/5020/mathjax-basic-tutorial-and-quick-reference">查看更多</a></p>
+<p>使用 <code>\\(</code> <code>\\)</code> 表示行内公式，例如质能方程：\(E=mc^2\)<br />
+使用 <code>$$begin{split}</code> <code>\end{split}$$</code>在使用MathJax的时候才能正常渲染</p>
+<p>示例：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">行内显示</span><br><span class="line">\\(q \in R \\)</span><br><span class="line">\\(\mathcal&#123;F&#125;(x)&#x3D;\mathcal&#123;H&#125;(x)-x\\)</span><br><span class="line">\\(\mathcal&#123;C&#125;\phi \delta e \mathfrak&#123;M&#125;\alpha th \mathit&#123;I&#125;n \mathcal&#123;H&#125;ex\sigma \mathbb&#123;N&#125;o\omega!\\)</span><br></pre></td></tr></table></figure>
+<p>\(q \in R \)<br />
+\(\mathcal{F}(x)=\mathcal{H}(x)-x\)<br />
+\(\mathcal{C}\phi \delta e \mathfrak{M}\alpha th \mathit{I}n \mathcal{H}ex\sigma \mathbb{N}o\omega!\)</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">$$\begin&#123;split&#125;</span><br><span class="line">\lim_&#123;n\rightarrow \infty&#125;(1+2^n+3^n)^\frac&#123;1&#125;&#123;x+\sin n&#125;</span><br><span class="line">\end&#123;split&#125;$$</span><br><span class="line"></span><br><span class="line">$$\begin&#123;split&#125;</span><br><span class="line">\frac&#123;\partial&#123;\mathcal&#123;E&#125;&#125;&#125;&#123;\partial&#123;x_l&#125;&#125; &amp; &#x3D; \frac&#123;\partial&#123;\mathcal&#123;E&#125;&#125;&#125;&#123;\partial&#123;x_L&#125;&#125;\frac&#123;\partial&#123;x_L&#125;&#125;&#123;\partial&#123;x_l&#125;&#125;\\\\</span><br><span class="line">&amp; &#x3D; \frac&#123;\partial&#123;\mathcal&#123;E&#125;&#125;&#125;&#123;\partial&#123;x_L&#125;&#125;\Big(1+\frac&#123;\partial&#123;&#125;&#125;&#123;\partial&#123;x_l&#125;&#125;\sum_&#123;i&#x3D;l&#125;^&#123;L-1&#125;\mathcal&#123;F&#125;(x_i,\mathcal&#123;W&#125;_i)\Big)</span><br><span class="line">\end&#123;split&#125;$$</span><br></pre></td></tr></table></figure>
+<p class='katex-block katex-error' title='ParseError: KaTeX parse error: No such environment: split at position 7: \begin{̲s̲p̲l̲i̲t̲}̲
+\lim_{n\righta…'>\begin{split}
+\lim_{n\rightarrow \infty}(1+2^n+3^n)^\frac{1}{x+\sin n}
+\end{split}</p>
+<p class='katex-block katex-error' title='ParseError: KaTeX parse error: No such environment: split at position 7: \begin{̲s̲p̲l̲i̲t̲}̲
+\frac{\partial…'>\begin{split}
+\frac{\partial{\mathcal{E}}}{\partial{x_l}} &amp; = \frac{\partial{\mathcal{E}}}{\partial{x_L}}\frac{\partial{x_L}}{\partial{x_l}}\\\\
+&amp; = \frac{\partial{\mathcal{E}}}{\partial{x_L}}\Big(1+\frac{\partial{}}{\partial{x_l}}\sum_{i=l}^{L-1}\mathcal{F}(x_i,\mathcal{W}_i)\Big)
+\end{split}</p>
+<p><a href="https://math.meta.stackexchange.com/questions/5020/mathjax-basic-tutorial-and-quick-reference">查看更多LateX语法</a></p>
+<p><a href="https://linkinpark213.com/2018/04/24/mathjax/">解决博客LateX渲染问题</a></p>
 <h1 id="12流程图"><a class="markdownIt-Anchor" href="#12流程图"></a> 12.流程图</h1>
 <h1 id="tips"><a class="markdownIt-Anchor" href="#tips"></a> Tips</h1>
 <p>在段落前使用[TOC]显示全文目录结构</p>
@@ -652,7 +669,7 @@ var _hmt = _hmt || [];
             
             <a href="/2019/12/31/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95%EF%BC%88%E4%B8%80%EF%BC%89/" class="media-left">
                 <p class="image is-64x64">
-                    <img class="thumbnail" src="/./thumbnails/2019-12-27.jpg" alt="数据结构与算法（一）">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="数据结构与算法（一）">
                 </p>
             </a>
             
@@ -690,7 +707,7 @@ var _hmt = _hmt || [];
             
             <a href="/2018/06/27/2018-06-27-%E5%88%86%E4%BA%AB%E9%9C%80%E8%A6%81%E6%95%85%E4%BA%8B%EF%BC%8C%E4%B9%9F%E9%9C%80%E8%A6%81%E5%8A%9B%E9%87%8F/" class="media-left">
                 <p class="image is-64x64">
-                    <img class="thumbnail" src="/./thumbnails/2018-6-27.jpg" alt="分享需要故事，也需要力量">
+                    <img class="thumbnail" src="https://github-ihs-1257225145.cos.ap-shanghai.myqcloud.com/2018-6-27.jpg" alt="分享需要故事，也需要力量">
                 </p>
             </a>
             
@@ -880,7 +897,7 @@ var _hmt = _hmt || [];
             
             <a href="/2019/12/31/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95%EF%BC%88%E4%B8%80%EF%BC%89/" class="media-left">
                 <p class="image is-64x64">
-                    <img class="thumbnail" src="/./thumbnails/2019-12-27.jpg" alt="数据结构与算法（一）">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="数据结构与算法（一）">
                 </p>
             </a>
             
@@ -918,7 +935,7 @@ var _hmt = _hmt || [];
             
             <a href="/2018/06/27/2018-06-27-%E5%88%86%E4%BA%AB%E9%9C%80%E8%A6%81%E6%95%85%E4%BA%8B%EF%BC%8C%E4%B9%9F%E9%9C%80%E8%A6%81%E5%8A%9B%E9%87%8F/" class="media-left">
                 <p class="image is-64x64">
-                    <img class="thumbnail" src="/./thumbnails/2018-6-27.jpg" alt="分享需要故事，也需要力量">
+                    <img class="thumbnail" src="https://github-ihs-1257225145.cos.ap-shanghai.myqcloud.com/2018-6-27.jpg" alt="分享需要故事，也需要力量">
                 </p>
             </a>
             

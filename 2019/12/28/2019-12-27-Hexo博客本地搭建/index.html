@@ -19,7 +19,7 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://github-ihs-1257225145.cos.ap-shanghai.myqcloud.com/2019-12-27.jpg">
 <meta property="article:published_time" content="2019-12-27T16:00:00.000Z">
-<meta property="article:modified_time" content="2020-02-10T14:46:42.391Z">
+<meta property="article:modified_time" content="2020-02-10T16:43:24.803Z">
 <meta property="article:author" content="Hanwin">
 <meta property="article:tag" content="Hexo">
 <meta name="twitter:card" content="summary">
@@ -161,7 +161,7 @@ var _hmt = _hmt || [];
                 <span class="level-item has-text-grey">
                     
                     
-                    6 分钟 读完 (大约 955 个字)
+                    7 分钟 读完 (大约 1034 个字)
                 </span>
                 
                 
@@ -180,7 +180,7 @@ var _hmt = _hmt || [];
 <h1 id="安装nodejs"><a class="markdownIt-Anchor" href="#安装nodejs"></a> 安装Node.js</h1>
 <p>这个应为我在很早以前就配置好了环境，所以没换时间。写的过程中特地去搜了一下，<sub>一步到胃</sub>，咳咳，一步到位。<br />
 1.检查是否安装过homebrew，没有安装的安装命令如下<br />
-<code>ruby -e &quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)&quot;</code><br />
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ruby -e &quot;$(curl -fsSL https:&#x2F;&#x2F;raw.githubusercontent.com&#x2F;Homebrew&#x2F;install&#x2F;master&#x2F;install)&quot;</span><br></pre></td></tr></table></figure><br />
 2.安装node<br />
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">brew link node</span><br><span class="line">brew uninstall node&#x2F;&#x2F;删除node，如果已经安装过会产生冲突</span><br><span class="line">brew install node</span><br></pre></td></tr></table></figure><br />
 检查是否安装完成<code>npm -v</code>、<code>node -v</code><br />
@@ -210,7 +210,7 @@ Nice done！</p>
 <p>此处有四个内容：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Application name： 随意填写undefinedHomepage </span><br><span class="line">URL: 随意填写一个</span><br><span class="line">Application description: 随意填写</span><br><span class="line">callback URL: 填你的博客网址（例: https:&#x2F;&#x2F;user.github.io&#x2F;blog&#x2F;），如果有域名则填域名</span><br></pre></td></tr></table></figure>
 <p>注册完后你会得到一个 client ID 和一个 client secret，记住这两个玩意，等会hexo配置会用到</p>
-<h3 id="第二步-安装gittalk"><a class="markdownIt-Anchor" href="#第二步-安装gittalk"></a> 第二步 安装Gittalk</h3>
+<h3 id="第二步-安装gitalk"><a class="markdownIt-Anchor" href="#第二步-安装gitalk"></a> 第二步 安装Gitalk</h3>
 <p>在你的博客下使用npm进行安装gitment</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install --save gitalk</span><br></pre></td></tr></table></figure>
 <h3 id="第三步-修改主题配置"><a class="markdownIt-Anchor" href="#第三步-修改主题配置"></a> 第三步 修改主题配置</h3>
@@ -224,7 +224,8 @@ Nice done！</p>
 <h1 id="统计"><a class="markdownIt-Anchor" href="#统计"></a> 统计</h1>
 <p><a href="https://tongji.baidu.com/web/10000125546/homepage/index">https://tongji.baidu.com/web/10000125546/homepage/index</a></p>
 <h4 id="tips"><a class="markdownIt-Anchor" href="#tips"></a> Tips</h4>
-<p>Hexo的插件地址<a href="https://hexo.io/plugins/">https://hexo.io/plugins/</a></p>
+<p>在后期部署的过程中遇到了一些MarkDown不能渲染的问题，例如LateX、注脚、目录不能正常显示，于是更换了渲染引擎<br />
+在<a href="https://hexo.io/plugins/">Hexo的插件</a>中搜索LateX找到了<a href="https://github.com/CHENXCHEN/hexo-renderer-markdown-it-plus">hexo-renderer-markdown-it-plus</a>插件，比较好用</p>
 
         </div>
         
@@ -513,7 +514,7 @@ Nice done！</p>
             
             <a href="/2019/12/31/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95%EF%BC%88%E4%B8%80%EF%BC%89/" class="media-left">
                 <p class="image is-64x64">
-                    <img class="thumbnail" src="/./thumbnails/2019-12-27.jpg" alt="数据结构与算法（一）">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="数据结构与算法（一）">
                 </p>
             </a>
             
@@ -551,7 +552,7 @@ Nice done！</p>
             
             <a href="/2018/06/27/2018-06-27-%E5%88%86%E4%BA%AB%E9%9C%80%E8%A6%81%E6%95%85%E4%BA%8B%EF%BC%8C%E4%B9%9F%E9%9C%80%E8%A6%81%E5%8A%9B%E9%87%8F/" class="media-left">
                 <p class="image is-64x64">
-                    <img class="thumbnail" src="/./thumbnails/2018-6-27.jpg" alt="分享需要故事，也需要力量">
+                    <img class="thumbnail" src="https://github-ihs-1257225145.cos.ap-shanghai.myqcloud.com/2018-6-27.jpg" alt="分享需要故事，也需要力量">
                 </p>
             </a>
             
@@ -741,7 +742,7 @@ Nice done！</p>
             
             <a href="/2019/12/31/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95%EF%BC%88%E4%B8%80%EF%BC%89/" class="media-left">
                 <p class="image is-64x64">
-                    <img class="thumbnail" src="/./thumbnails/2019-12-27.jpg" alt="数据结构与算法（一）">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="数据结构与算法（一）">
                 </p>
             </a>
             
@@ -779,7 +780,7 @@ Nice done！</p>
             
             <a href="/2018/06/27/2018-06-27-%E5%88%86%E4%BA%AB%E9%9C%80%E8%A6%81%E6%95%85%E4%BA%8B%EF%BC%8C%E4%B9%9F%E9%9C%80%E8%A6%81%E5%8A%9B%E9%87%8F/" class="media-left">
                 <p class="image is-64x64">
-                    <img class="thumbnail" src="/./thumbnails/2018-6-27.jpg" alt="分享需要故事，也需要力量">
+                    <img class="thumbnail" src="https://github-ihs-1257225145.cos.ap-shanghai.myqcloud.com/2018-6-27.jpg" alt="分享需要故事，也需要力量">
                 </p>
             </a>
             
