@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Hanwin`s Blog</title>
+  <icon>https://www.hanwinbi.github.io/icon.png</icon>
+  
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="https://www.hanwinbi.github.io/"/>
+  <updated>2020-02-15T08:49:29.000Z</updated>
+  <id>https://www.hanwinbi.github.io/</id>
+  
+  <author>
+    <name>Hanwin</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Vector向量</title>
+    <link href="https://www.hanwinbi.github.io/2020/02/15/Vector%E5%90%91%E9%87%8F/"/>
+    <id>https://www.hanwinbi.github.io/2020/02/15/Vector%E5%90%91%E9%87%8F/</id>
+    <published>2020-02-14T16:00:00.000Z</published>
+    <updated>2020-02-15T08:49:29.000Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;参考书籍：《C++标准程序库》&lt;/p&gt;
+&lt;h3 id=&quot;vector定义&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot; href=&quot;#vector定义&quot;&gt;&lt;/a&gt; vector定义:&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;C++中的一种数据结构,确切的说是一个类.它相当于一个动态的数组,当程序员无法知道自己需要的数组的规模多大时,用其来解决问题可以达到最大节约空间的目的。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&quot;用法&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot; href=&quot;#用法&quot;&gt;&lt;/a&gt; 用法:&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;头文件#include &lt;vector&gt;以包含所需要的类文件vector&lt;/li&gt;
+&lt;li&gt;vector是定义于namespace std内的template，一定要加上using namespace std;&lt;/li&gt;
+&lt;/ol&gt;
+    
+    </summary>
+    
+    
+    
+      <category term="C++" scheme="https://www.hanwinbi.github.io/tags/C/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>MarkDown简明语法</title>
+    <link href="https://www.hanwinbi.github.io/2020/02/10/2020-02-10-Markdown%E7%AE%80%E6%98%8E%E8%AF%AD%E6%B3%95/"/>
+    <id>https://www.hanwinbi.github.io/2020/02/10/2020-02-10-Markdown%E7%AE%80%E6%98%8E%E8%AF%AD%E6%B3%95/</id>
+    <published>2020-02-09T16:00:00.000Z</published>
+    <updated>2020-02-15T08:48:00.000Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;strong&gt;对于新手使用markdown语法时，要注意在每一个标记的后面加上一个空格&lt;/strong&gt;&lt;/p&gt;
+&lt;h1 id=&quot;1分级标题&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot; href=&quot;#1分级标题&quot;&gt;&lt;/a&gt; 1.分级标题&lt;/h1&gt;
+&lt;p&gt;使用===表示一级标题，使用—表示二级标题&lt;br /&gt;
+或者使用在行首加#号表示不同级别的标题&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;# 这是一个一级标题
+## 这是一个二级标题
+### 这是一个三级标题
+#### 这是一个四级标题
+共有六个不同分级的标题
+&lt;/code&gt;&lt;/pre&gt;
+    
+    </summary>
+    
+    
+      <category term="计算机基础" scheme="https://www.hanwinbi.github.io/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/"/>
+    
+    
+      <category term="Markdown" scheme="https://www.hanwinbi.github.io/tags/Markdown/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>数据结构与算法（一）</title>
+    <link href="https://www.hanwinbi.github.io/2019/12/31/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95%EF%BC%88%E4%B8%80%EF%BC%89/"/>
+    <id>https://www.hanwinbi.github.io/2019/12/31/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95%EF%BC%88%E4%B8%80%EF%BC%89/</id>
+    <published>2019-12-30T16:00:00.000Z</published>
+    <updated>2020-02-10T17:11:57.000Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;重新开始&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot; href=&quot;#重新开始&quot;&gt;&lt;/a&gt; 重新开始&lt;/h1&gt;
+&lt;p&gt;复习了很久之后，我很清楚自己的代码水平处于什么位置，而对程序员来说，算法这个不得不跨越的坎儿着实有点难搞，其实总体来说也还好，因为并不是每件事的性价比都那么高，时间成本是跨越算法的唯一障碍，所以我这个掉队的大雁也需要开始自己的算法学习之路了。&lt;/p&gt;
+&lt;p&gt;我选择了&lt;em&gt;极客时间&lt;/em&gt;里的&lt;a href=&quot;https://time.geekbang.org/column/intro/126&quot;&gt;《数据结构与算法之美》&lt;/a&gt;栏目开始着手，学习的过程我会以文档、思维导图以及代码的方式实现。&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="计算机基础" scheme="https://www.hanwinbi.github.io/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/"/>
+    
+    
+      <category term="数据结构" scheme="https://www.hanwinbi.github.io/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>搭建Hexo本地博客及网络部署</title>
+    <link href="https://www.hanwinbi.github.io/2019/12/28/2019-12-27-Hexo%E5%8D%9A%E5%AE%A2%E6%9C%AC%E5%9C%B0%E6%90%AD%E5%BB%BA/"/>
+    <id>https://www.hanwinbi.github.io/2019/12/28/2019-12-27-Hexo%E5%8D%9A%E5%AE%A2%E6%9C%AC%E5%9C%B0%E6%90%AD%E5%BB%BA/</id>
+    <published>2019-12-27T16:00:00.000Z</published>
+    <updated>2020-02-10T17:12:37.000Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;我的第一个博客搭建与2016年，那时候才大一，也是跟着教程一起来的，三年过去了，早已经忘得不止东南西北了。考完试了，还是想把属于自己的小天地搭建起来，whatever，我的地盘我做主。&lt;/p&gt;
+&lt;p&gt;以下搭建过程是我在进行本地预览的过程，为了避免以后重新设置的时候忘记，所以记录下来了。&lt;a href=&quot;https://juejin.im/post/5cef68415188253fed710994&quot;&gt;来源&lt;/a&gt;&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="计算机基础" scheme="https://www.hanwinbi.github.io/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/"/>
+    
+    
+      <category term="Hexo" scheme="https://www.hanwinbi.github.io/tags/Hexo/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>分享需要故事，也需要力量</title>
+    <link href="https://www.hanwinbi.github.io/2018/06/27/2018-06-27-%E5%88%86%E4%BA%AB%E9%9C%80%E8%A6%81%E6%95%85%E4%BA%8B%EF%BC%8C%E4%B9%9F%E9%9C%80%E8%A6%81%E5%8A%9B%E9%87%8F/"/>
+    <id>https://www.hanwinbi.github.io/2018/06/27/2018-06-27-%E5%88%86%E4%BA%AB%E9%9C%80%E8%A6%81%E6%95%85%E4%BA%8B%EF%BC%8C%E4%B9%9F%E9%9C%80%E8%A6%81%E5%8A%9B%E9%87%8F/</id>
+    <published>2018-06-27T14:23:00.000Z</published>
+    <updated>2020-02-15T08:47:47.000Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;会讲故事的人一定会在人群中博得一片掌声，而对于一个怯于在众人面前分享故事的人来说，能够站在众人面前就算是一种勇气了。而我，终于以一次平台支撑的形式，站在了一个小小的舞台上，去分享我的故事。不，还不是我的故事。&lt;/p&gt;
+&lt;p&gt;这是一次成功的分享，也是一次完全失败的分享。&lt;/p&gt;
+&lt;p&gt;我所站立的角度完全只是对于置身于工作室的小伙伴来说的，说成功是因为按照预先订好的流程走完了，这些并不重要，我想说的重点放在了失败的分享上面。&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="Untiy" scheme="https://www.hanwinbi.github.io/categories/Untiy/"/>
+    
+    
+      <category term="生活" scheme="https://www.hanwinbi.github.io/tags/%E7%94%9F%E6%B4%BB/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>写给父亲</title>
+    <link href="https://www.hanwinbi.github.io/2018/06/17/2018-06-17-%E5%86%99%E7%BB%99%E8%80%81%E7%88%B6%E4%BA%B2/"/>
+    <id>https://www.hanwinbi.github.io/2018/06/17/2018-06-17-%E5%86%99%E7%BB%99%E8%80%81%E7%88%B6%E4%BA%B2/</id>
+    <published>2018-06-17T12:59:00.000Z</published>
+    <updated>2020-02-15T08:47:36.000Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;父亲老对我说：父子之间要多交流。但我老觉得，说说话就行了，有什么好交流的，直到昨天我才意识到父子之间还是多交流的好。从教育这方面来说，父子之间接受的教育完全不同，存在的观念也不同，对于父亲不能理解或是有误解的东西，如果我老说：算了，说了你也不懂。对父亲来说无疑也是一种心理上的伤害。于此，我想开始对父亲不理解的东西进行解释。用尽量简洁的话语，来拉近我们的距离。 —致我的老父亲&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="life" scheme="https://www.hanwinbi.github.io/categories/life/"/>
+    
+    
+      <category term="生活" scheme="https://www.hanwinbi.github.io/tags/%E7%94%9F%E6%B4%BB/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>老友，小盖</title>
+    <link href="https://www.hanwinbi.github.io/2017/08/09/2017-08-09-%E8%80%81%E5%8F%8B%EF%BC%8C%E5%B0%8F%E7%9B%96/"/>
+    <id>https://www.hanwinbi.github.io/2017/08/09/2017-08-09-%E8%80%81%E5%8F%8B%EF%BC%8C%E5%B0%8F%E7%9B%96/</id>
+    <published>2017-08-09T05:13:00.000Z</published>
+    <updated>2020-02-15T08:47:26.000Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;致敬友情，请勿亵渎。&lt;/p&gt;
+&lt;p&gt;小盖，这是写给你的，如果我足够幸运，你能够看到，那就真真是极好的。&lt;/p&gt;
+&lt;p&gt;最近看写到朋友的文章挺多的，看完之后总有一股暖流涌上心头，我仔细想了想，其实我的朋友还挺少的。&lt;/p&gt;
+&lt;p&gt;一路走来虽然没有经历了什么风霜雪雨，也没有落得几场狼狈不堪，即便没有出生入死，但是三五老友还是有的。
+    
+    </summary>
+    
+    
+      <category term="life" scheme="https://www.hanwinbi.github.io/categories/life/"/>
+    
+    
+      <category term="生活" scheme="https://www.hanwinbi.github.io/tags/%E7%94%9F%E6%B4%BB/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>浪矢杂货店给你的信</title>
+    <link href="https://www.hanwinbi.github.io/2017/05/05/2017-05-05-%E6%B5%AA%E7%9F%A2%E6%9D%82%E8%B4%A7%E5%BA%97%E7%BB%99%E4%BD%A0%E7%9A%84%E4%BF%A1/"/>
+    <id>https://www.hanwinbi.github.io/2017/05/05/2017-05-05-%E6%B5%AA%E7%9F%A2%E6%9D%82%E8%B4%A7%E5%BA%97%E7%BB%99%E4%BD%A0%E7%9A%84%E4%BF%A1/</id>
+    <published>2017-05-05T14:37:44.000Z</published>
+    <updated>2020-02-15T08:32:24.000Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;“这么多年了，你都死哪去了?”&lt;/p&gt;
+&lt;p&gt;真的很幸运，时隔千秋，这牛奶盒子里竟然还能收到来自另一个时空的信，如果可以的话真想一直待在浪矢杂货店的屋子里，时间不会流逝，但我可以等着来信，看着信，但我不会像浪矢爷爷一样回信，特别，是你的。&lt;br /&gt;
+因为我不是一个解忧人。&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="life" scheme="https://www.hanwinbi.github.io/categories/life/"/>
+    
+    
+      <category term="生活" scheme="https://www.hanwinbi.github.io/tags/%E7%94%9F%E6%B4%BB/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>再见2016</title>
+    <link href="https://www.hanwinbi.github.io/2016/12/31/2016-01-01-%E5%86%8D%E8%A7%812016/"/>
+    <id>https://www.hanwinbi.github.io/2016/12/31/2016-01-01-%E5%86%8D%E8%A7%812016/</id>
+    <published>2016-12-31T13:37:44.000Z</published>
+    <updated>2020-02-15T08:32:26.000Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;这里是我的2016。&lt;/p&gt;
+&lt;p&gt;可以说我的成长仅仅是从2016年开始的，从一月到六月的一路冲刺，满怀激情，希望迈入一片新的天地。从六月到十二月，一步一步的沉沦，我感觉整个世界都变的昏暗。虽然一路走来有说有笑，但我总是在质问自己：这，难道就是我想要的生活吗？&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="life" scheme="https://www.hanwinbi.github.io/categories/life/"/>
+    
+    
+      <category term="生活" scheme="https://www.hanwinbi.github.io/tags/%E7%94%9F%E6%B4%BB/"/>
+    
+  </entry>
+  
+</feed>
