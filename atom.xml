@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>Hanwin`s Blog</title>
-  <icon>https://github-ihs-1257225145.cos.ap-shanghai.myqcloud.com/icon.jpg</icon>
+  <icon>https://www.hanwinbi.github.io/icarus/source/images/icon.jpg</icon>
   
   <link href="/atom.xml" rel="self"/>
   
