@@ -13,13 +13,13 @@
     <meta name="description" content="本笔记的内容和练习笔记来自《汇编语言（第三版）》王爽著，其中的练习结果和代码部分来自网络，部分是我自己写的代码和理解，不保证正确性。希望这篇笔记能够给在学习汇编语言路上的同行者一些帮助。欢迎补充和指正。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="汇编原理第1-5章笔记">
-<meta property="og:url" content="https://www.hanwinbi.github.io/2021/06/03/%E6%B1%87%E7%BC%96%E5%8E%9F%E7%90%86/index.html">
+<meta property="og:url" content="https://www.hanwinbi.github.io/2021/06/03/%E6%B1%87%E7%BC%96%E5%8E%9F%E7%90%861-5/index.html">
 <meta property="og:site_name" content="Hanwin&#96;s Blog">
 <meta property="og:description" content="本笔记的内容和练习笔记来自《汇编语言（第三版）》王爽著，其中的练习结果和代码部分来自网络，部分是我自己写的代码和理解，不保证正确性。希望这篇笔记能够给在学习汇编语言路上的同行者一些帮助。欢迎补充和指正。">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://www.hanwinbi.github.io/images/og_image.png">
 <meta property="article:published_time" content="2021-06-02T16:00:00.000Z">
-<meta property="article:modified_time" content="2021-06-03T07:38:37.118Z">
+<meta property="article:modified_time" content="2021-06-07T07:53:45.549Z">
 <meta property="article:author" content="Hanwin">
 <meta property="article:tag" content="Assembly">
 <meta name="twitter:card" content="summary">
@@ -439,6 +439,13 @@ CS:IP指向内存地址，它指向的内容是指令的物理地址</p>
 <div class="card card-transparent">
     <div class="level post-navigation is-flex-wrap is-mobile">
         
+        <div class="level-start">
+            <a class="level level-item has-link-grey  article-nav-prev" href="/2021/06/07/%E6%B1%87%E7%BC%96%E5%8E%9F%E7%90%866-7/">
+                <i class="level-item fas fa-chevron-left"></i>
+                <span class="level-item">汇编原理第6-7章笔记</span>
+            </a>
+        </div>
+        
         
         <div class="level-end">
             <a class="level level-item has-link-grey  article-nav-next" href="/2021/05/16/%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/">
@@ -463,7 +470,7 @@ CS:IP指向内存地址，它指向的内容是指令的物理地址</p>
     var gitalk = new Gitalk({
         clientID: '50f1364eb8bec40153cf',
         clientSecret: 'a13f1f7be1c6706c6935a3621b4f2ceadd2e9cb3',
-        id: '847e0fcbb373d97b3f4c167ed5edfe50',
+        id: 'c4dc73e3392edcdd2410b58895acefdc',
         repo: 'blog_comments',
         owner: 'hanwinbi',
         admin: "hanwinbi",
@@ -520,7 +527,7 @@ CS:IP指向内存地址，它指向的内容是指令的物理地址</p>
                     </p>
                     <a href="/archives">
                         <p class="title has-text-weight-normal">
-                            14
+                            15
                         </p>
                     </a>
                 </div>
@@ -735,7 +742,7 @@ CS:IP指向内存地址，它指向的内容是指令的物理地址</p>
                 <span class="level-item">计算机基础</span>
             </span>
             <span class="level-end">
-                <span class="level-item tag">5</span>
+                <span class="level-item tag">6</span>
             </span>
         </a></li>
             </ul>
@@ -748,7 +755,7 @@ CS:IP指向内存地址，它指向的内容是指令的物理地址</p>
         <h3 class="menu-label">
             标签云
         </h3>
-        <a href="/tags/Assembly/" style="font-size: 10px;">Assembly</a> <a href="/tags/C/" style="font-size: 15px;">C++</a> <a href="/tags/Hexo/" style="font-size: 10px;">Hexo</a> <a href="/tags/Markdown/" style="font-size: 10px;">Markdown</a> <a href="/tags/%E4%BF%A1/" style="font-size: 15px;">信</a> <a href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" style="font-size: 10px;">数据结构</a> <a href="/tags/%E7%A2%8E%E7%A2%8E%E5%BF%B5/" style="font-size: 20px;">碎碎念</a>
+        <a href="/tags/Assembly/" style="font-size: 15px;">Assembly</a> <a href="/tags/C/" style="font-size: 15px;">C++</a> <a href="/tags/Hexo/" style="font-size: 10px;">Hexo</a> <a href="/tags/Markdown/" style="font-size: 10px;">Markdown</a> <a href="/tags/%E4%BF%A1/" style="font-size: 15px;">信</a> <a href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" style="font-size: 10px;">数据结构</a> <a href="/tags/%E7%A2%8E%E7%A2%8E%E5%BF%B5/" style="font-size: 20px;">碎碎念</a>
     </div>
 </div>
     
@@ -763,7 +770,26 @@ CS:IP指向内存地址，它指向的内容是指令的物理地址</p>
         
         <article class="media">
             
-            <a href="/2021/06/03/%E6%B1%87%E7%BC%96%E5%8E%9F%E7%90%86/" class="media-left">
+            <a href="/2021/06/07/%E6%B1%87%E7%BC%96%E5%8E%9F%E7%90%866-7/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="汇编原理第6-7章笔记">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2021-06-06T16:00:00.000Z">2021-06-07</time></div>
+                    <a href="/2021/06/07/%E6%B1%87%E7%BC%96%E5%8E%9F%E7%90%866-7/" class="title has-link-black-ter is-size-6 has-text-weight-normal">汇编原理第6-7章笔记</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/">计算机基础</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/2021/06/03/%E6%B1%87%E7%BC%96%E5%8E%9F%E7%90%861-5/" class="media-left">
                 <p class="image is-64x64">
                     <img class="thumbnail" src="/images/thumbnail.svg" alt="汇编原理第1-5章笔记">
                 </p>
@@ -772,7 +798,7 @@ CS:IP指向内存地址，它指向的内容是指令的物理地址</p>
             <div class="media-content">
                 <div class="content">
                     <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2021-06-02T16:00:00.000Z">2021-06-03</time></div>
-                    <a href="/2021/06/03/%E6%B1%87%E7%BC%96%E5%8E%9F%E7%90%86/" class="title has-link-black-ter is-size-6 has-text-weight-normal">汇编原理第1-5章笔记</a>
+                    <a href="/2021/06/03/%E6%B1%87%E7%BC%96%E5%8E%9F%E7%90%861-5/" class="title has-link-black-ter is-size-6 has-text-weight-normal">汇编原理第1-5章笔记</a>
                     <p class="is-size-7 is-uppercase">
                         <a class="has-link-grey -link" href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/">计算机基础</a>
                     </p>
@@ -837,25 +863,6 @@ CS:IP指向内存地址，它指向的内容是指令的物理地址</p>
             </div>
         </article>
         
-        <article class="media">
-            
-            <a href="/2020/04/08/%E6%B4%97%E6%BE%A1%E6%97%B6%E7%9A%84%E4%B8%80%E4%BA%9B%E6%80%9D%E8%80%83%EF%BC%88%E4%BA%8C%EF%BC%89/" class="media-left">
-                <p class="image is-64x64">
-                    <img class="thumbnail" src="https://github-ihs-1257225145.cos.ap-shanghai.myqcloud.com/2020/The%20Platform.jpeg" alt="洗澡时的一些思考（二）">
-                </p>
-            </a>
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-04-07T16:00:00.000Z">2020-04-08</time></div>
-                    <a href="/2020/04/08/%E6%B4%97%E6%BE%A1%E6%97%B6%E7%9A%84%E4%B8%80%E4%BA%9B%E6%80%9D%E8%80%83%EF%BC%88%E4%BA%8C%EF%BC%89/" class="title has-link-black-ter is-size-6 has-text-weight-normal">洗澡时的一些思考（二）</a>
-                    <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/life/">life</a>
-                    </p>
-                </div>
-            </div>
-        </article>
-        
     </div>
 </div>
         
@@ -873,7 +880,7 @@ CS:IP指向内存地址，它指向的内容是指令的物理地址</p>
                     <span class="level-item">六月 2021</span>
                 </span>
                 <span class="level-end">
-                    <span class="level-item tag">1</span>
+                    <span class="level-item tag">2</span>
                 </span>
             </a>
         </li>
@@ -993,7 +1000,7 @@ CS:IP指向内存地址，它指向的内容是指令的物理地址</p>
                 <div class="control">
                     <a class="tags has-addons" href="/tags/Assembly/">
                         <span class="tag">Assembly</span>
-                        <span class="tag is-grey">1</span>
+                        <span class="tag is-grey">2</span>
                     </a>
                 </div>
                 
@@ -1063,7 +1070,26 @@ CS:IP指向内存地址，它指向的内容是指令的物理地址</p>
         
         <article class="media">
             
-            <a href="/2021/06/03/%E6%B1%87%E7%BC%96%E5%8E%9F%E7%90%86/" class="media-left">
+            <a href="/2021/06/07/%E6%B1%87%E7%BC%96%E5%8E%9F%E7%90%866-7/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="汇编原理第6-7章笔记">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2021-06-06T16:00:00.000Z">2021-06-07</time></div>
+                    <a href="/2021/06/07/%E6%B1%87%E7%BC%96%E5%8E%9F%E7%90%866-7/" class="title has-link-black-ter is-size-6 has-text-weight-normal">汇编原理第6-7章笔记</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/">计算机基础</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/2021/06/03/%E6%B1%87%E7%BC%96%E5%8E%9F%E7%90%861-5/" class="media-left">
                 <p class="image is-64x64">
                     <img class="thumbnail" src="/images/thumbnail.svg" alt="汇编原理第1-5章笔记">
                 </p>
@@ -1072,7 +1098,7 @@ CS:IP指向内存地址，它指向的内容是指令的物理地址</p>
             <div class="media-content">
                 <div class="content">
                     <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2021-06-02T16:00:00.000Z">2021-06-03</time></div>
-                    <a href="/2021/06/03/%E6%B1%87%E7%BC%96%E5%8E%9F%E7%90%86/" class="title has-link-black-ter is-size-6 has-text-weight-normal">汇编原理第1-5章笔记</a>
+                    <a href="/2021/06/03/%E6%B1%87%E7%BC%96%E5%8E%9F%E7%90%861-5/" class="title has-link-black-ter is-size-6 has-text-weight-normal">汇编原理第1-5章笔记</a>
                     <p class="is-size-7 is-uppercase">
                         <a class="has-link-grey -link" href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/">计算机基础</a>
                     </p>
@@ -1137,25 +1163,6 @@ CS:IP指向内存地址，它指向的内容是指令的物理地址</p>
             </div>
         </article>
         
-        <article class="media">
-            
-            <a href="/2020/04/08/%E6%B4%97%E6%BE%A1%E6%97%B6%E7%9A%84%E4%B8%80%E4%BA%9B%E6%80%9D%E8%80%83%EF%BC%88%E4%BA%8C%EF%BC%89/" class="media-left">
-                <p class="image is-64x64">
-                    <img class="thumbnail" src="https://github-ihs-1257225145.cos.ap-shanghai.myqcloud.com/2020/The%20Platform.jpeg" alt="洗澡时的一些思考（二）">
-                </p>
-            </a>
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-04-07T16:00:00.000Z">2020-04-08</time></div>
-                    <a href="/2020/04/08/%E6%B4%97%E6%BE%A1%E6%97%B6%E7%9A%84%E4%B8%80%E4%BA%9B%E6%80%9D%E8%80%83%EF%BC%88%E4%BA%8C%EF%BC%89/" class="title has-link-black-ter is-size-6 has-text-weight-normal">洗澡时的一些思考（二）</a>
-                    <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/life/">life</a>
-                    </p>
-                </div>
-            </div>
-        </article>
-        
     </div>
 </div>
     
@@ -1173,7 +1180,7 @@ CS:IP指向内存地址，它指向的内容是指令的物理地址</p>
                     <span class="level-item">六月 2021</span>
                 </span>
                 <span class="level-end">
-                    <span class="level-item tag">1</span>
+                    <span class="level-item tag">2</span>
                 </span>
             </a>
         </li>
@@ -1293,7 +1300,7 @@ CS:IP指向内存地址，它指向的内容是指令的物理地址</p>
                 <div class="control">
                     <a class="tags has-addons" href="/tags/Assembly/">
                         <span class="tag">Assembly</span>
-                        <span class="tag is-grey">1</span>
+                        <span class="tag is-grey">2</span>
                     </a>
                 </div>
                 

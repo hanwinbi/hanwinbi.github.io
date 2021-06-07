@@ -160,6 +160,95 @@ var _hmt = _hmt || [];
         
         <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
             <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2021-06-06T16:00:00.000Z">2021-06-07</time>
+                
+                <div class="level-item">
+                <a class="has-link-grey -link" href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/">计算机基础</a>
+                </div>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    6 分钟 读完 (大约 935 个字)
+                </span>
+                
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                <a class="has-link-black-ter" href="/2021/06/07/%E6%B1%87%E7%BC%96%E5%8E%9F%E7%90%866-7/">汇编原理第6-7章笔记</a>
+            
+        </h1>
+        <div class="content">
+            <h2 id="第六章"><a class="markdownIt-Anchor" href="#第六章"></a> 第六章</h2>
+<p><code>dw</code> 的含义是定义字符型数据，即<code>define word</code></p>
+<p>数据和代码段放在一块之后会导致代码执行并不是从指令开始，而是从数据开始，需要手动设置指向第一条指令。另一种操作方式是在程序的第一条指令前面加上一个标号<code>start</code>，这个标号还需要在标号end之后出现</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">assume cs:code</span><br><span class="line">code segment</span><br><span class="line"></span><br><span class="line">	dw data &#x2F;&#x2F;数据</span><br><span class="line">	start: .... &#x2F;&#x2F;程序入口</span><br><span class="line">	</span><br><span class="line">code ends</span><br><span class="line">end start &#x2F;&#x2F;程序结束</span><br></pre></td></tr></table></figure>
+<p>根据什么设置CPU的<code>CS:IP</code>指向程序的第一条指令？用伪指令 end 描述程序的结束和程序的入口。在编译连接之后，由 <code>end start</code> 指明程序的入口，被转换成一个入口地址，存储在可执行文件的描述信息中。</p>
+<h4 id="检测点-61"><a class="markdownIt-Anchor" href="#检测点-61"></a> 检测点 6.1</h4>
+<ol>
+<li><code>mov cs:[bx],ax</code></li>
+<li>cs 24h <code>pop cs:[bx]</code></li>
+</ol>
+<p>将代码、数据、栈放在一个段中，在体量比较大的程序中会比较混乱，可以使用不同的段来存放这些数据，每个段的段名不一样。</p>
+<p>assume的作用：将定义的具有一定用途的段和相关的寄存器联系起来</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">assume cs:code,ds:data,ss:stack</span><br><span class="line"></span><br><span class="line">data segment	;数据段</span><br><span class="line">...</span><br><span class="line">data ends</span><br><span class="line"></span><br><span class="line">stack segment	;栈段	</span><br><span class="line">...</span><br><span class="line">stack ends</span><br><span class="line"></span><br><span class="line">code segment	;代码段</span><br><span class="line">	start:	...</span><br><span class="line">code ends</span><br><span class="line"></span><br><span class="line">end start</span><br></pre></td></tr></table></figure>
+<h3 id="实验五"><a class="markdownIt-Anchor" href="#实验五"></a> 实验五</h3>
+<p>数据段和栈段在程序加载后实际占据的空间都是以16个字节为单位的。如果不足，以0补全填充。<br />
+程序最开始时ds：00~ds：100H是留给程序与操作系统通讯使用的psp内存段，data<br />
+数据段从ds:100H处开始</p>
+<ol>
+<li>a. 数据段中的数据保持不变<br />
+b. 076C 076B 076A<br />
+c. 和答案不一样(X-2 X-1)</li>
+<li>a. 数据段中的数据保持不变<br />
+b. 076C 076B 076A<br />
+c. 和答案不一样(X-2 X-1)</li>
+<li>a. 数据段中的数据保持不变<br />
+b. cs=076A ss=0769 ds=075A<br />
+c. 和答案不太一样</li>
+</ol>
+<hr />
+<h2 id="第七章-更灵活的定位内存地址的方法"><a class="markdownIt-Anchor" href="#第七章-更灵活的定位内存地址的方法"></a> 第七章 更灵活的定位内存地址的方法</h2>
+<p>and 和 or 指令，逻辑与(1 &amp;&amp; 1 = 1)和逻辑或(1 || 0 =1)</p>
+<p>使用更方便的方式指明内存单元<code>[bx+idata] 或 [idata+bx]、idata[bx]、[bx].idata</code></p>
+<h5 id="tips你意想不到的事情"><a class="markdownIt-Anchor" href="#tips你意想不到的事情"></a> Tips:你意想不到的事情</h5>
+<p>指明内存单元的方式可以用<code>[bx+idata] 或 [idata+bx]、idata[bx]、[bx].idata</code>，C语言中的数组是由数组名和下标，形如<code>a[0]</code>构成，<code>a</code>其实是数组指针，指向数组的第一个元素，<code>[idata]</code>中的就是偏移地址，偏移的大小是<code>sizeof()*idata</code>，既然汇编语言中可以表示为<code>idata[bx]</code>的形式，那么我们可不可以把数组获取数组中数据也表示成类似的形式<code>idata[数组名]</code>。<br />
+我给出了下面的例子</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdlib.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> a[<span class="number">5</span>] = &#123;<span class="number">0</span>, <span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>&#125;;</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">auto</span> &amp;i:a)&#123;</span><br><span class="line">		<span class="built_in">cout</span> &lt;&lt; i[a] &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>运行之后你就会发现这竟然是可以正常运行的，而且结果是正确的！！C语言在表示上和汇编语言有着相似性。</p>
+<p><code>SI</code>和<code>DI</code>类似于 bx 的功能，不能分成两个 8 位寄存器来使用</p>
+<p><code>[bx+si] [bx+di]</code><br />
+<code>[bx+si+idata] [bx+di+idata] [bx][si].idata idata[bx][si]</code></p>
+<blockquote>
+<p>一般来说，在需要暂存数据的时候，我们应该使用栈。</p>
+</blockquote>
+<h3 id="实验六"><a class="markdownIt-Anchor" href="#实验六"></a> 实验六</h3>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br></pre></td><td class="code"><pre><span class="line">assume cs:codesg,ds:datasg,ss:stacksg</span><br><span class="line"></span><br><span class="line">stacksg segment</span><br><span class="line">    dw 0,0,0,0,0,0,0,0</span><br><span class="line">stacksg ends</span><br><span class="line"></span><br><span class="line">datasg segment</span><br><span class="line">    db &#39;1. file         &#39;</span><br><span class="line">    db &#39;2. edit         &#39;</span><br><span class="line">    db &#39;3. search       &#39;</span><br><span class="line">    db &#39;4. view         &#39;</span><br><span class="line">    db &#39;5. option       &#39;</span><br><span class="line">    db &#39;6. help         &#39;</span><br><span class="line">datasg ends</span><br><span class="line"></span><br><span class="line">codesg segment</span><br><span class="line">    start:  mov ax,stacksg</span><br><span class="line">            mov ss,ax</span><br><span class="line">            mov sp,16</span><br><span class="line">            mov ax,datasg</span><br><span class="line">            mov ds,ax</span><br><span class="line">            mov bx,0</span><br><span class="line"></span><br><span class="line">            mov cx,6</span><br><span class="line">        s0: push cx</span><br><span class="line">            mov cx, 4</span><br><span class="line">            mov si, 3</span><br><span class="line"></span><br><span class="line">        s:  mov al,[bx+si]</span><br><span class="line">            and al,11011111b</span><br><span class="line">            mov [bx+si],al</span><br><span class="line">            inc si</span><br><span class="line">            loop s</span><br><span class="line">            </span><br><span class="line">            add bx, 16</span><br><span class="line">            pop cx</span><br><span class="line">            loop s0</span><br><span class="line"></span><br><span class="line">        mov ax, 4c00h</span><br><span class="line">        int 21h</span><br><span class="line">codesg ends</span><br><span class="line">end start</span><br></pre></td></tr></table></figure>
+        </div>
+        
+        
+        
+    </div>
+</div>
+
+
+
+
+
+
+
+
+    
+<div class="card">
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
                 <time class="level-item has-text-grey" datetime="2021-06-02T16:00:00.000Z">2021-06-03</time>
                 
                 <div class="level-item">
@@ -179,7 +268,7 @@ var _hmt = _hmt || [];
         
         <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
             
-                <a class="has-link-black-ter" href="/2021/06/03/%E6%B1%87%E7%BC%96%E5%8E%9F%E7%90%86/">汇编原理第1-5章笔记</a>
+                <a class="has-link-black-ter" href="/2021/06/03/%E6%B1%87%E7%BC%96%E5%8E%9F%E7%90%861-5/">汇编原理第1-5章笔记</a>
             
         </h1>
         <div class="content">
@@ -190,7 +279,7 @@ var _hmt = _hmt || [];
         <div class="level is-mobile">
             <div class="level-start">
                 <div class="level-item">
-                <a class="button is-size-7 is-light" href="/2021/06/03/%E6%B1%87%E7%BC%96%E5%8E%9F%E7%90%86/#more">阅读更多</a>
+                <a class="button is-size-7 is-light" href="/2021/06/03/%E6%B1%87%E7%BC%96%E5%8E%9F%E7%90%861-5/#more">阅读更多</a>
                 </div>
             </div>
         </div>
@@ -251,7 +340,7 @@ var _hmt = _hmt || [];
                     </p>
                     <a href="/archives">
                         <p class="title has-text-weight-normal">
-                            14
+                            15
                         </p>
                     </a>
                 </div>
@@ -378,7 +467,7 @@ var _hmt = _hmt || [];
                 <span class="level-item">计算机基础</span>
             </span>
             <span class="level-end">
-                <span class="level-item tag">5</span>
+                <span class="level-item tag">6</span>
             </span>
         </a></li>
             </ul>
@@ -391,7 +480,7 @@ var _hmt = _hmt || [];
         <h3 class="menu-label">
             标签云
         </h3>
-        <a href="/tags/Assembly/" style="font-size: 10px;">Assembly</a> <a href="/tags/C/" style="font-size: 15px;">C++</a> <a href="/tags/Hexo/" style="font-size: 10px;">Hexo</a> <a href="/tags/Markdown/" style="font-size: 10px;">Markdown</a> <a href="/tags/%E4%BF%A1/" style="font-size: 15px;">信</a> <a href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" style="font-size: 10px;">数据结构</a> <a href="/tags/%E7%A2%8E%E7%A2%8E%E5%BF%B5/" style="font-size: 20px;">碎碎念</a>
+        <a href="/tags/Assembly/" style="font-size: 15px;">Assembly</a> <a href="/tags/C/" style="font-size: 15px;">C++</a> <a href="/tags/Hexo/" style="font-size: 10px;">Hexo</a> <a href="/tags/Markdown/" style="font-size: 10px;">Markdown</a> <a href="/tags/%E4%BF%A1/" style="font-size: 15px;">信</a> <a href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" style="font-size: 10px;">数据结构</a> <a href="/tags/%E7%A2%8E%E7%A2%8E%E5%BF%B5/" style="font-size: 20px;">碎碎念</a>
     </div>
 </div>
     
@@ -406,7 +495,26 @@ var _hmt = _hmt || [];
         
         <article class="media">
             
-            <a href="/2021/06/03/%E6%B1%87%E7%BC%96%E5%8E%9F%E7%90%86/" class="media-left">
+            <a href="/2021/06/07/%E6%B1%87%E7%BC%96%E5%8E%9F%E7%90%866-7/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="汇编原理第6-7章笔记">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2021-06-06T16:00:00.000Z">2021-06-07</time></div>
+                    <a href="/2021/06/07/%E6%B1%87%E7%BC%96%E5%8E%9F%E7%90%866-7/" class="title has-link-black-ter is-size-6 has-text-weight-normal">汇编原理第6-7章笔记</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/">计算机基础</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/2021/06/03/%E6%B1%87%E7%BC%96%E5%8E%9F%E7%90%861-5/" class="media-left">
                 <p class="image is-64x64">
                     <img class="thumbnail" src="/images/thumbnail.svg" alt="汇编原理第1-5章笔记">
                 </p>
@@ -415,7 +523,7 @@ var _hmt = _hmt || [];
             <div class="media-content">
                 <div class="content">
                     <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2021-06-02T16:00:00.000Z">2021-06-03</time></div>
-                    <a href="/2021/06/03/%E6%B1%87%E7%BC%96%E5%8E%9F%E7%90%86/" class="title has-link-black-ter is-size-6 has-text-weight-normal">汇编原理第1-5章笔记</a>
+                    <a href="/2021/06/03/%E6%B1%87%E7%BC%96%E5%8E%9F%E7%90%861-5/" class="title has-link-black-ter is-size-6 has-text-weight-normal">汇编原理第1-5章笔记</a>
                     <p class="is-size-7 is-uppercase">
                         <a class="has-link-grey -link" href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/">计算机基础</a>
                     </p>
@@ -480,25 +588,6 @@ var _hmt = _hmt || [];
             </div>
         </article>
         
-        <article class="media">
-            
-            <a href="/2020/04/08/%E6%B4%97%E6%BE%A1%E6%97%B6%E7%9A%84%E4%B8%80%E4%BA%9B%E6%80%9D%E8%80%83%EF%BC%88%E4%BA%8C%EF%BC%89/" class="media-left">
-                <p class="image is-64x64">
-                    <img class="thumbnail" src="https://github-ihs-1257225145.cos.ap-shanghai.myqcloud.com/2020/The%20Platform.jpeg" alt="洗澡时的一些思考（二）">
-                </p>
-            </a>
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-04-07T16:00:00.000Z">2020-04-08</time></div>
-                    <a href="/2020/04/08/%E6%B4%97%E6%BE%A1%E6%97%B6%E7%9A%84%E4%B8%80%E4%BA%9B%E6%80%9D%E8%80%83%EF%BC%88%E4%BA%8C%EF%BC%89/" class="title has-link-black-ter is-size-6 has-text-weight-normal">洗澡时的一些思考（二）</a>
-                    <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/life/">life</a>
-                    </p>
-                </div>
-            </div>
-        </article>
-        
     </div>
 </div>
         
@@ -516,7 +605,7 @@ var _hmt = _hmt || [];
                     <span class="level-item">六月 2021</span>
                 </span>
                 <span class="level-end">
-                    <span class="level-item tag">1</span>
+                    <span class="level-item tag">2</span>
                 </span>
             </a>
         </li>
@@ -636,7 +725,7 @@ var _hmt = _hmt || [];
                 <div class="control">
                     <a class="tags has-addons" href="/tags/Assembly/">
                         <span class="tag">Assembly</span>
-                        <span class="tag is-grey">1</span>
+                        <span class="tag is-grey">2</span>
                     </a>
                 </div>
                 
@@ -706,7 +795,26 @@ var _hmt = _hmt || [];
         
         <article class="media">
             
-            <a href="/2021/06/03/%E6%B1%87%E7%BC%96%E5%8E%9F%E7%90%86/" class="media-left">
+            <a href="/2021/06/07/%E6%B1%87%E7%BC%96%E5%8E%9F%E7%90%866-7/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="汇编原理第6-7章笔记">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2021-06-06T16:00:00.000Z">2021-06-07</time></div>
+                    <a href="/2021/06/07/%E6%B1%87%E7%BC%96%E5%8E%9F%E7%90%866-7/" class="title has-link-black-ter is-size-6 has-text-weight-normal">汇编原理第6-7章笔记</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/">计算机基础</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/2021/06/03/%E6%B1%87%E7%BC%96%E5%8E%9F%E7%90%861-5/" class="media-left">
                 <p class="image is-64x64">
                     <img class="thumbnail" src="/images/thumbnail.svg" alt="汇编原理第1-5章笔记">
                 </p>
@@ -715,7 +823,7 @@ var _hmt = _hmt || [];
             <div class="media-content">
                 <div class="content">
                     <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2021-06-02T16:00:00.000Z">2021-06-03</time></div>
-                    <a href="/2021/06/03/%E6%B1%87%E7%BC%96%E5%8E%9F%E7%90%86/" class="title has-link-black-ter is-size-6 has-text-weight-normal">汇编原理第1-5章笔记</a>
+                    <a href="/2021/06/03/%E6%B1%87%E7%BC%96%E5%8E%9F%E7%90%861-5/" class="title has-link-black-ter is-size-6 has-text-weight-normal">汇编原理第1-5章笔记</a>
                     <p class="is-size-7 is-uppercase">
                         <a class="has-link-grey -link" href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/">计算机基础</a>
                     </p>
@@ -780,25 +888,6 @@ var _hmt = _hmt || [];
             </div>
         </article>
         
-        <article class="media">
-            
-            <a href="/2020/04/08/%E6%B4%97%E6%BE%A1%E6%97%B6%E7%9A%84%E4%B8%80%E4%BA%9B%E6%80%9D%E8%80%83%EF%BC%88%E4%BA%8C%EF%BC%89/" class="media-left">
-                <p class="image is-64x64">
-                    <img class="thumbnail" src="https://github-ihs-1257225145.cos.ap-shanghai.myqcloud.com/2020/The%20Platform.jpeg" alt="洗澡时的一些思考（二）">
-                </p>
-            </a>
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-04-07T16:00:00.000Z">2020-04-08</time></div>
-                    <a href="/2020/04/08/%E6%B4%97%E6%BE%A1%E6%97%B6%E7%9A%84%E4%B8%80%E4%BA%9B%E6%80%9D%E8%80%83%EF%BC%88%E4%BA%8C%EF%BC%89/" class="title has-link-black-ter is-size-6 has-text-weight-normal">洗澡时的一些思考（二）</a>
-                    <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/life/">life</a>
-                    </p>
-                </div>
-            </div>
-        </article>
-        
     </div>
 </div>
     
@@ -816,7 +905,7 @@ var _hmt = _hmt || [];
                     <span class="level-item">六月 2021</span>
                 </span>
                 <span class="level-end">
-                    <span class="level-item tag">1</span>
+                    <span class="level-item tag">2</span>
                 </span>
             </a>
         </li>
@@ -936,7 +1025,7 @@ var _hmt = _hmt || [];
                 <div class="control">
                     <a class="tags has-addons" href="/tags/Assembly/">
                         <span class="tag">Assembly</span>
-                        <span class="tag is-grey">1</span>
+                        <span class="tag is-grey">2</span>
                     </a>
                 </div>
                 
