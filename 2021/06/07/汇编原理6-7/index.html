@@ -10,16 +10,16 @@
 <title>汇编原理第6-7章笔记 - Hanwin`s Blog</title>
 
 
-    <meta name="description" content="第六章 dw 的含义是定义字符型数据，即define word 数据和代码段放在一块之后会导致代码执行并不是从指令开始，而是从数据开始，需要手动设置指向第一条指令。另一种操作方式是在程序的第一条指令前面加上一个标号start，这个标号还需要在标号end之后出现 12345678assume cs:codecode segment	dw data &#x2F;&#x2F;数据	start: ..">
+    <meta name="description" content="查看正文">
 <meta property="og:type" content="article">
 <meta property="og:title" content="汇编原理第6-7章笔记">
 <meta property="og:url" content="https://www.hanwinbi.github.io/2021/06/07/%E6%B1%87%E7%BC%96%E5%8E%9F%E7%90%866-7/index.html">
 <meta property="og:site_name" content="Hanwin&#96;s Blog">
-<meta property="og:description" content="第六章 dw 的含义是定义字符型数据，即define word 数据和代码段放在一块之后会导致代码执行并不是从指令开始，而是从数据开始，需要手动设置指向第一条指令。另一种操作方式是在程序的第一条指令前面加上一个标号start，这个标号还需要在标号end之后出现 12345678assume cs:codecode segment	dw data &#x2F;&#x2F;数据	start: ..">
+<meta property="og:description" content="查看正文">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://www.hanwinbi.github.io/images/og_image.png">
 <meta property="article:published_time" content="2021-06-06T16:00:00.000Z">
-<meta property="article:modified_time" content="2021-06-10T05:00:28.486Z">
+<meta property="article:modified_time" content="2021-06-10T05:33:29.508Z">
 <meta property="article:author" content="Hanwin">
 <meta property="article:tag" content="Assembly">
 <meta name="twitter:card" content="summary">
@@ -166,7 +166,7 @@ var _hmt = _hmt || [];
                 <span class="level-item has-text-grey">
                     
                     
-                    6 分钟 读完 (大约 936 个字)
+                    6 分钟 读完 (大约 940 个字)
                 </span>
                 
                 
@@ -179,7 +179,8 @@ var _hmt = _hmt || [];
             
         </h1>
         <div class="content">
-            <a id="more"></a>
+            <p>查看正文</p>
+<a id="more"></a>
 <h2 id="第六章"><a class="markdownIt-Anchor" href="#第六章"></a> 第六章</h2>
 <p><code>dw</code> 的含义是定义字符型数据，即<code>define word</code></p>
 <p>数据和代码段放在一块之后会导致代码执行并不是从指令开始，而是从数据开始，需要手动设置指向第一条指令。另一种操作方式是在程序的第一条指令前面加上一个标号<code>start</code>，这个标号还需要在标号end之后出现</p>
