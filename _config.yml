@@ -128,7 +128,7 @@ feed:
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
   type: git
-  repo: https://github.com/hanwinbi/hanwinbi.github.io
+  repo: git@github.com:hanwinbi/hanwinbi.github.io.git
   branch: master
   name: hanwinbi
   email: bihanwin@gmail.com
