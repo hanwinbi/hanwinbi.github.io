@@ -11,8 +11,8 @@ jobs:
     runs-on: ubuntu-latest
     name: A job to deploy blog.
     steps:
-     - name: Checkout
-        uses: actions/checkout@v2
+    - name: Checkout
+      uses: actions/checkout@v2
 
     # Caching dependencies to speed up workflows. (GitHub will remove any cache entries that have not been accessed in over 7 days.)
     - name: Cache node modules
