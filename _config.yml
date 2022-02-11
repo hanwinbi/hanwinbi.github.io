@@ -130,4 +130,6 @@ deploy:
   type: git
   repo: https://github.com/hanwinbi/hanwinbi.github.io
   branch: master
-  message: "add a post"
+  name: hanwinbi
+  email: bihanwin@gmail.com
+  # message: "add a post"
