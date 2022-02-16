@@ -22,8 +22,8 @@ jobs:
       - name: Checkout theme repo
         uses: actions/checkout@v2
         with:
-          repository: hanwinbi/hanwinbi.github.io
-          ref: source
+          repository: hanwinbi/hexo-theme-cactus
+          ref: master
           path: themes/cactus
 
       # 这里用的是 Node.js 14.x
