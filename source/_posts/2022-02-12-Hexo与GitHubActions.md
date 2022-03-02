@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Hexo 与 GitHub Actions
+title: ✏️【探索】Hexo 与 GitHub Actions
 date: 2022-02-12
 categories: 计算机基础
 tag: Git
