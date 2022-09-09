@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang=zh>
+<head>
+    <!-- so meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
+    <meta name="description" content="对于新手使用markdown语法时，要注意在每一个标记的后面加上一个空格  1.分级标题 使用&#x3D;&#x3D;&#x3D;表示一级标题，使用—表示二级标题 或者使用在行首加#号表示不同级别的标题 # 这是一个一级标题 ## 这是一个二级标题 ### 这是一个三级标题 #### 这是一个四级标题 共有六个不同分级的标题   2.粗体和斜体 使用 * 表示斜体，使用 ** 表示粗体,使用 *** 表示加粗斜体，使用 ~~">
+<meta property="og:type" content="article">
+<meta property="og:title" content="📒【Markdown】MarkDown简明语法">
+<meta property="og:url" content="https://www.hanwinbi.github.io/2020/02/10/Simple-Markdown-grammer/index.html">
+<meta property="og:site_name" content="Hanwin&#96;s Blog">
+<meta property="og:description" content="对于新手使用markdown语法时，要注意在每一个标记的后面加上一个空格  1.分级标题 使用&#x3D;&#x3D;&#x3D;表示一级标题，使用—表示二级标题 或者使用在行首加#号表示不同级别的标题 # 这是一个一级标题 ## 这是一个二级标题 ### 这是一个三级标题 #### 这是一个四级标题 共有六个不同分级的标题   2.粗体和斜体 使用 * 表示斜体，使用 ** 表示粗体,使用 *** 表示加粗斜体，使用 ~~">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://github-ihs-1257225145.cos.ap-shanghai.myqcloud.com/2019-12-27.jpg">
+<meta property="article:published_time" content="2020-02-09T16:00:00.000Z">
+<meta property="article:modified_time" content="2022-09-09T16:15:25.166Z">
+<meta property="article:author" content="Hanwin">
+<meta property="article:tag" content="Markdown">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://github-ihs-1257225145.cos.ap-shanghai.myqcloud.com/2019-12-27.jpg">
+    
+    
+      
+        
+          <link rel="shortcut icon" href="/images/icon.png">
+        
+      
+      
+        
+          <link rel="icon" type="image/png" href="/images/favicon-192x192.png" sizes="192x192">
+        
+      
+      
+        
+          <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+        
+      
+    
+    <!-- title -->
+    <title>📒【Markdown】MarkDown简明语法</title>
+    <!-- styles -->
+    
+<link rel="stylesheet" href="/css/style.css">
+
+    <!-- persian styles -->
+    
+    <!-- rss -->
+    
+    
+      <link rel="alternate" href="/true" title="Hanwin`s Blog" type="application/atom+xml" />
+    
+	<!-- mathjax -->
+	
+		<script type="text/x-mathjax-config">
+		  MathJax.Hub.Config({
+			tex2jax: {
+			  skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+			  inlineMath: [['$','$']]
+			}
+		  });
+		</script>
+		<script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML' async></script>
+	
+<meta name="generator" content="Hexo 4.2.0"></head>
+
+<body class="max-width mx-auto px3 ltr">
+    
+      <div id="header-post">
+  <a id="menu-icon" href="#" aria-label="Menu"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#" aria-label="Menu"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" aria-label="Top" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fas fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+        <!--
+       --><li><a href="/">首页</a></li><!--
+     --><!--
+       --><li><a href="/archives/">归档</a></li><!--
+     -->
+      </ul>
+    </span>
+    <br/>
+    <span id="actions">
+      <ul>
+        
+        <li><a class="icon" aria-label="上一篇" href="/2020/02/15/Vector-in-cpp/"><i class="fas fa-chevron-left" aria-hidden="true" onmouseover="$('#i-prev').toggle();" onmouseout="$('#i-prev').toggle();"></i></a></li>
+        
+        
+        <li><a class="icon" aria-label="下一篇" href="/2019/12/31/datastructure-and-algorithm/"><i class="fas fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i></a></li>
+        
+        <li><a class="icon" aria-label="返回顶部" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i></a></li>
+        <li><a class="icon" aria-label="分享文章" href="#"><i class="fas fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i></a></li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">上一篇</span>
+      <span id="i-next" class="info" style="display:none;">下一篇</span>
+      <span id="i-top" class="info" style="display:none;">返回顶部</span>
+      <span id="i-share" class="info" style="display:none;">分享文章</span>
+    </span>
+    <br/>
+    <div id="share" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=https://www.hanwinbi.github.io/2020/02/10/Simple-Markdown-grammer/" target="_blank" rel="noopener"><i class="fab fa-facebook " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=https://www.hanwinbi.github.io/2020/02/10/Simple-Markdown-grammer/&text=📒【Markdown】MarkDown简明语法" target="_blank" rel="noopener"><i class="fab fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=https://www.hanwinbi.github.io/2020/02/10/Simple-Markdown-grammer/&title=📒【Markdown】MarkDown简明语法" target="_blank" rel="noopener"><i class="fab fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=https://www.hanwinbi.github.io/2020/02/10/Simple-Markdown-grammer/&is_video=false&description=📒【Markdown】MarkDown简明语法" target="_blank" rel="noopener"><i class="fab fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=📒【Markdown】MarkDown简明语法&body=Check out this article: https://www.hanwinbi.github.io/2020/02/10/Simple-Markdown-grammer/"><i class="fas fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=https://www.hanwinbi.github.io/2020/02/10/Simple-Markdown-grammer/&title=📒【Markdown】MarkDown简明语法" target="_blank" rel="noopener"><i class="fab fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=https://www.hanwinbi.github.io/2020/02/10/Simple-Markdown-grammer/&title=📒【Markdown】MarkDown简明语法" target="_blank" rel="noopener"><i class="fab fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=https://www.hanwinbi.github.io/2020/02/10/Simple-Markdown-grammer/&title=📒【Markdown】MarkDown简明语法" target="_blank" rel="noopener"><i class="fab fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=https://www.hanwinbi.github.io/2020/02/10/Simple-Markdown-grammer/&title=📒【Markdown】MarkDown简明语法" target="_blank" rel="noopener"><i class="fab fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=https://www.hanwinbi.github.io/2020/02/10/Simple-Markdown-grammer/&name=📒【Markdown】MarkDown简明语法&description=" target="_blank" rel="noopener"><i class="fab fa-tumblr " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://news.ycombinator.com/submitlink?u=https://www.hanwinbi.github.io/2020/02/10/Simple-Markdown-grammer/&t=📒【Markdown】MarkDown简明语法" target="_blank" rel="noopener"><i class="fab fa-hacker-news " aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+    <div id="toc">
+      <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#1分级标题"><span class="toc-number">1.</span> <span class="toc-text"> 1.分级标题</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#2粗体和斜体"><span class="toc-number">2.</span> <span class="toc-text"> 2.粗体和斜体</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#3列表"><span class="toc-number">3.</span> <span class="toc-text"> 3.列表</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#31有序列表"><span class="toc-number">3.0.1.</span> <span class="toc-text"> 3.1有序列表</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#32无序列表"><span class="toc-number">3.0.2.</span> <span class="toc-text"> 3.2无序列表</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#4文字引用"><span class="toc-number">4.</span> <span class="toc-text"> 4.文字引用</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#5代码块"><span class="toc-number">5.</span> <span class="toc-text"> 5.代码块</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#51行内代码块"><span class="toc-number">5.0.1.</span> <span class="toc-text"> 5.1行内代码块</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#52整体代码块"><span class="toc-number">5.0.2.</span> <span class="toc-text"> 5.2整体代码块</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#6链接地址"><span class="toc-number">6.</span> <span class="toc-text"> 6.链接地址</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#7锚点"><span class="toc-number">7.</span> <span class="toc-text"> 7.锚点</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#8插入图片"><span class="toc-number">8.</span> <span class="toc-text"> 8.插入图片</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#9注脚"><span class="toc-number">9.</span> <span class="toc-text"> 9.注脚</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#10表格"><span class="toc-number">10.</span> <span class="toc-text"> 10.表格</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#11latex公式"><span class="toc-number">11.</span> <span class="toc-text"> 11.LaTeX公式</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#12流程图"><span class="toc-number">12.</span> <span class="toc-text"> 12.流程图</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#tips"><span class="toc-number">13.</span> <span class="toc-text"> Tips</span></a></li></ol>
+    </div>
+  </span>
+</div>
+
+    
+    <div class="content index py4">
+        
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+  <header>
+    
+    <h1 class="posttitle" itemprop="name headline">
+        📒【Markdown】MarkDown简明语法
+    </h1>
+
+
+
+    <div class="meta">
+      <span class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <span itemprop="name">Hanwin</span>
+      </span>
+      
+    <div class="postdate">
+      
+        <time datetime="2020-02-09T16:00:00.000Z" itemprop="datePublished">2020-02-10</time>
+        
+      
+    </div>
+
+
+      
+    <div class="article-category">
+        <i class="fas fa-archive"></i>
+        <a class="category-link" href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/">计算机基础</a>
+    </div>
+
+
+      
+    <div class="article-tag">
+        <i class="fas fa-tag"></i>
+        <a class="tag-link" href="/tags/Markdown/" rel="tag">Markdown</a>
+    </div>
+
+
+    </div>
+  </header>
+  
+
+  <div class="content" itemprop="articleBody">
+    <p><strong>对于新手使用markdown语法时，要注意在每一个标记的后面加上一个空格</strong></p>
+<h1 id="1分级标题"><a class="markdownIt-Anchor" href="#1分级标题"></a> 1.分级标题</h1>
+<p>使用===表示一级标题，使用—表示二级标题<br />
+或者使用在行首加#号表示不同级别的标题</p>
+<pre><code># 这是一个一级标题
+## 这是一个二级标题
+### 这是一个三级标题
+#### 这是一个四级标题
+共有六个不同分级的标题
+</code></pre>
+<h1 id="2粗体和斜体"><a class="markdownIt-Anchor" href="#2粗体和斜体"></a> 2.粗体和斜体</h1>
+<p>使用 * 表示斜体，使用 ** 表示粗体,使用 *** 表示加粗斜体，使用 ~~ 表示删除线<br />
+<em>这是斜体文字</em><br />
+<strong>这是粗体文字</strong><br />
+<em><strong>这是加粗斜体</strong></em><br />
+<s>这是删除线</s></p>
+<h1 id="3列表"><a class="markdownIt-Anchor" href="#3列表"></a> 3.列表</h1>
+<h3 id="31有序列表"><a class="markdownIt-Anchor" href="#31有序列表"></a> 3.1有序列表</h3>
+<p>使用数字和小数点表示</p>
+<ol>
+<li>第一点</li>
+<li>第二点</li>
+<li>第三点</li>
+</ol>
+<h3 id="32无序列表"><a class="markdownIt-Anchor" href="#32无序列表"></a> 3.2无序列表</h3>
+<p>使用*、+、-表示无序列表<br />
+示例：</p>
+<ul>
+<li>无序列表 一（用*表示</li>
+</ul>
+<ul>
+<li>无序列表 二（用+表示</li>
+</ul>
+<ul>
+<li>无序列表 三（用-表示</li>
+</ul>
+<h1 id="4文字引用"><a class="markdownIt-Anchor" href="#4文字引用"></a> 4.文字引用</h1>
+<p>使用&gt;表示文字引用</p>
+<blockquote>
+<p>这是一段引用文字</p>
+</blockquote>
+<p>区块引用可以嵌套</p>
+<blockquote>
+<p>引用</p>
+<blockquote>
+<p>再引用</p>
+</blockquote>
+</blockquote>
+<h1 id="5代码块"><a class="markdownIt-Anchor" href="#5代码块"></a> 5.代码块</h1>
+<h3 id="51行内代码块"><a class="markdownIt-Anchor" href="#51行内代码块"></a> 5.1行内代码块</h3>
+<p>使用 `代码`（英文输入，数字1的左侧）表示行内代码块</p>
+<p><code>printf(&quot;Hello world.&quot;)</code></p>
+<h3 id="52整体代码块"><a class="markdownIt-Anchor" href="#52整体代码块"></a> 5.2整体代码块</h3>
+<pre><code>四个缩进空格表示整体代码块
+或者使用```多行内容```
+</code></pre>
+<h1 id="6链接地址"><a class="markdownIt-Anchor" href="#6链接地址"></a> 6.链接地址</h1>
+<p>使用 [写入需要链接的文字](需要链接的地址) 作为行内链接方式<br />
+<a href="hanwinbi.github.io">Hanwin的个人博客</a></p>
+<p>使用 [这里添入链接文字][链接标记1]、[这里添入链接文字][链接标记2]作为参考式使用<br />
+链接地址放在最后一行<br />
+[链接标记1]: <a href="http://hanwinbi.github.io" target="_blank" rel="noopener">hanwinbi.github.io</a><br />
+[链接标记1]: <a href="http://hanwinbi.github.io" target="_blank" rel="noopener">hanwinbi.github.io</a></p>
+<p>使用 &lt;&gt; 自动链接简单地址<br />
+<a href="https:hanwinbi.github.io" target="_blank" rel="noopener">https:hanwinbi.github.io</a></p>
+<h1 id="7锚点"><a class="markdownIt-Anchor" href="#7锚点"></a> 7.锚点</h1>
+<p>当前Markdown引擎不可用（直接使用的主题提供的toc</p>
+<h1 id="8插入图片"><a class="markdownIt-Anchor" href="#8插入图片"></a> 8.插入图片</h1>
+<p>使用![加载不出时显示的文字](图片地址 “悬浮时显示的文字”)作为行内插图</p>
+<p><img src="https://github-ihs-1257225145.cos.ap-shanghai.myqcloud.com/2019-12-27.jpg" alt="Loading" title="Home" /></p>
+<p>类似链接地址![图片][链接标记3]<br />
+[链接标记3]: https:图片地址 “title”</p>
+<h1 id="9注脚"><a class="markdownIt-Anchor" href="#9注脚"></a> 9.注脚</h1>
+<p>在需要添加注脚的文字后<sup class="footnote-ref"><a href="#fn1" id="fnref1">[1]</a></sup>,注脚自动添加到段落最后<sup class="footnote-ref"><a href="#fn2" id="fnref2">[2]</a></sup></p>
+<p>[^注脚标记]: hello<br />
+[^2]: 不同标记形式的注脚</p>
+<h1 id="10表格"><a class="markdownIt-Anchor" href="#10表格"></a> 10.表格</h1>
+<ol>
+<li>不管是哪种方式，第一行为表头，第二行分隔表头和主体部分，第三行开始每一行为一个表格行。</li>
+<li>列于列之间用管道符|隔开。原生方式的表格每一行的两边也要有管道符。</li>
+<li>第二行还可以为不同的列指定对齐方向。默认为左对齐，在-右边加上:就右对齐。</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">表头1|表头2|表头3|表头4|表头5</span><br><span class="line">-|-:|-|-|-|</span><br><span class="line">左对齐文字|右对齐文字</span><br></pre></td></tr></table></figure>
+<table>
+<thead>
+<tr>
+<th>表头1</th>
+<th style="text-align:right">表头2</th>
+<th>表头3</th>
+<th>表头4</th>
+<th>表头5</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>左对齐文字</td>
+<td style="text-align:right">右对齐文字</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h1 id="11latex公式"><a class="markdownIt-Anchor" href="#11latex公式"></a> 11.LaTeX公式</h1>
+<p>使用 <code>\\(</code> <code>\\)</code> 表示行内公式，例如质能方程：\(E=mc^2\)<br />
+使用 <code>$$begin{split}</code> <code>\end{split}$$</code>在使用MathJax的时候才能正常渲染</p>
+<p>示例：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">行内显示</span><br><span class="line">\\(q \in R \\)</span><br><span class="line">\\(\mathcal&#123;F&#125;(x)&#x3D;\mathcal&#123;H&#125;(x)-x\\)</span><br><span class="line">\\(\mathcal&#123;C&#125;\phi \delta e \mathfrak&#123;M&#125;\alpha th \mathit&#123;I&#125;n \mathcal&#123;H&#125;ex\sigma \mathbb&#123;N&#125;o\omega!\\)</span><br></pre></td></tr></table></figure>
+<p>\(q \in R \)<br />
+\(\mathcal{F}(x)=\mathcal{H}(x)-x\)<br />
+\(\mathcal{C}\phi \delta e \mathfrak{M}\alpha th \mathit{I}n \mathcal{H}ex\sigma \mathbb{N}o\omega!\)</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">$$\begin&#123;split&#125;</span><br><span class="line">\lim_&#123;n\rightarrow \infty&#125;(1+2^n+3^n)^\frac&#123;1&#125;&#123;x+\sin n&#125;</span><br><span class="line">\end&#123;split&#125;$$</span><br><span class="line"></span><br><span class="line">$$\begin&#123;split&#125;</span><br><span class="line">\frac&#123;\partial&#123;\mathcal&#123;E&#125;&#125;&#125;&#123;\partial&#123;x_l&#125;&#125; &amp; &#x3D; \frac&#123;\partial&#123;\mathcal&#123;E&#125;&#125;&#125;&#123;\partial&#123;x_L&#125;&#125;\frac&#123;\partial&#123;x_L&#125;&#125;&#123;\partial&#123;x_l&#125;&#125;\\\\</span><br><span class="line">&amp; &#x3D; \frac&#123;\partial&#123;\mathcal&#123;E&#125;&#125;&#125;&#123;\partial&#123;x_L&#125;&#125;\Big(1+\frac&#123;\partial&#123;&#125;&#125;&#123;\partial&#123;x_l&#125;&#125;\sum_&#123;i&#x3D;l&#125;^&#123;L-1&#125;\mathcal&#123;F&#125;(x_i,\mathcal&#123;W&#125;_i)\Big)</span><br><span class="line">\end&#123;split&#125;$$</span><br></pre></td></tr></table></figure>
+<p class='katex-block katex-error' title='ParseError: KaTeX parse error: No such environment: split at position 7: \begin{̲s̲p̲l̲i̲t̲}̲
+\lim_{n\righta…'>\begin{split}
+\lim_{n\rightarrow \infty}(1+2^n+3^n)^\frac{1}{x+\sin n}
+\end{split}</p>
+<p class='katex-block katex-error' title='ParseError: KaTeX parse error: No such environment: split at position 7: \begin{̲s̲p̲l̲i̲t̲}̲
+\frac{\partial…'>\begin{split}
+\frac{\partial{\mathcal{E}}}{\partial{x_l}} &amp; = \frac{\partial{\mathcal{E}}}{\partial{x_L}}\frac{\partial{x_L}}{\partial{x_l}}\\\\
+&amp; = \frac{\partial{\mathcal{E}}}{\partial{x_L}}\Big(1+\frac{\partial{}}{\partial{x_l}}\sum_{i=l}^{L-1}\mathcal{F}(x_i,\mathcal{W}_i)\Big)
+\end{split}</p>
+<p><a href="https://math.meta.stackexchange.com/questions/5020/mathjax-basic-tutorial-and-quick-reference" target="_blank" rel="noopener">查看更多LateX语法</a></p>
+<p><a href="https://linkinpark213.com/2018/04/24/mathjax/" target="_blank" rel="noopener">解决博客LateX渲染问题</a></p>
+<h1 id="12流程图"><a class="markdownIt-Anchor" href="#12流程图"></a> 12.流程图</h1>
+<h1 id="tips"><a class="markdownIt-Anchor" href="#tips"></a> Tips</h1>
+<p>在段落前使用[TOC]显示全文目录结构</p>
+<hr class="footnotes-sep" />
+<section class="footnotes">
+<ol class="footnotes-list">
+<li id="fn1" class="footnote-item"><p>注脚标记内容 <a href="#fnref1" class="footnote-backref">↩︎</a></p>
+</li>
+<li id="fn2" class="footnote-item"><p>不同标记形式的注脚 <a href="#fnref2" class="footnote-backref">↩︎</a></p>
+</li>
+</ol>
+</section>
+
+  </div>
+</article>
+
+
+
+        
+          <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul>
+         
+          <li><a href="/">首页</a></li>
+         
+          <li><a href="/archives/">归档</a></li>
+        
+      </ul>
+    </div>
+
+    <div id="toc-footer" style="display: none">
+      <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#1分级标题"><span class="toc-number">1.</span> <span class="toc-text"> 1.分级标题</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#2粗体和斜体"><span class="toc-number">2.</span> <span class="toc-text"> 2.粗体和斜体</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#3列表"><span class="toc-number">3.</span> <span class="toc-text"> 3.列表</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#31有序列表"><span class="toc-number">3.0.1.</span> <span class="toc-text"> 3.1有序列表</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#32无序列表"><span class="toc-number">3.0.2.</span> <span class="toc-text"> 3.2无序列表</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#4文字引用"><span class="toc-number">4.</span> <span class="toc-text"> 4.文字引用</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#5代码块"><span class="toc-number">5.</span> <span class="toc-text"> 5.代码块</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#51行内代码块"><span class="toc-number">5.0.1.</span> <span class="toc-text"> 5.1行内代码块</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#52整体代码块"><span class="toc-number">5.0.2.</span> <span class="toc-text"> 5.2整体代码块</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#6链接地址"><span class="toc-number">6.</span> <span class="toc-text"> 6.链接地址</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#7锚点"><span class="toc-number">7.</span> <span class="toc-text"> 7.锚点</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#8插入图片"><span class="toc-number">8.</span> <span class="toc-text"> 8.插入图片</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#9注脚"><span class="toc-number">9.</span> <span class="toc-text"> 9.注脚</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#10表格"><span class="toc-number">10.</span> <span class="toc-text"> 10.表格</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#11latex公式"><span class="toc-number">11.</span> <span class="toc-text"> 11.LaTeX公式</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#12流程图"><span class="toc-number">12.</span> <span class="toc-text"> 12.流程图</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#tips"><span class="toc-number">13.</span> <span class="toc-text"> Tips</span></a></li></ol>
+    </div>
+
+    <div id="share-footer" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=https://www.hanwinbi.github.io/2020/02/10/Simple-Markdown-grammer/" target="_blank" rel="noopener"><i class="fab fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=https://www.hanwinbi.github.io/2020/02/10/Simple-Markdown-grammer/&text=📒【Markdown】MarkDown简明语法" target="_blank" rel="noopener"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=https://www.hanwinbi.github.io/2020/02/10/Simple-Markdown-grammer/&title=📒【Markdown】MarkDown简明语法" target="_blank" rel="noopener"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=https://www.hanwinbi.github.io/2020/02/10/Simple-Markdown-grammer/&is_video=false&description=📒【Markdown】MarkDown简明语法" target="_blank" rel="noopener"><i class="fab fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=📒【Markdown】MarkDown简明语法&body=Check out this article: https://www.hanwinbi.github.io/2020/02/10/Simple-Markdown-grammer/"><i class="fas fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=https://www.hanwinbi.github.io/2020/02/10/Simple-Markdown-grammer/&title=📒【Markdown】MarkDown简明语法" target="_blank" rel="noopener"><i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=https://www.hanwinbi.github.io/2020/02/10/Simple-Markdown-grammer/&title=📒【Markdown】MarkDown简明语法" target="_blank" rel="noopener"><i class="fab fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=https://www.hanwinbi.github.io/2020/02/10/Simple-Markdown-grammer/&title=📒【Markdown】MarkDown简明语法" target="_blank" rel="noopener"><i class="fab fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=https://www.hanwinbi.github.io/2020/02/10/Simple-Markdown-grammer/&title=📒【Markdown】MarkDown简明语法" target="_blank" rel="noopener"><i class="fab fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=https://www.hanwinbi.github.io/2020/02/10/Simple-Markdown-grammer/&name=📒【Markdown】MarkDown简明语法&description=" target="_blank" rel="noopener"><i class="fab fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://news.ycombinator.com/submitlink?u=https://www.hanwinbi.github.io/2020/02/10/Simple-Markdown-grammer/&t=📒【Markdown】MarkDown简明语法" target="_blank" rel="noopener"><i class="fab fa-hacker-news fa-lg" aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+
+    <div id="actions-footer">
+        <a id="menu" class="icon" href="#" onclick="$('#nav-footer').toggle();return false;"><i class="fas fa-bars fa-lg" aria-hidden="true"></i> 菜单</a>
+        <a id="toc" class="icon" href="#" onclick="$('#toc-footer').toggle();return false;"><i class="fas fa-list fa-lg" aria-hidden="true"></i> 目录</a>
+        <a id="share" class="icon" href="#" onclick="$('#share-footer').toggle();return false;"><i class="fas fa-share-alt fa-lg" aria-hidden="true"></i> 分享</a>
+        <a id="top" style="display:none" class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up fa-lg" aria-hidden="true"></i> 返回顶部</a>
+    </div>
+
+  </div>
+</div>
+
+        
+        <footer id="footer">
+  <div class="footer-left">
+    Copyright &copy;
+    
+    
+    2016-2022
+    Hanwin
+  </div>
+  <div class="footer-right">
+    <nav>
+      <ul>
+        <!--
+       --><li><a href="/">首页</a></li><!--
+     --><!--
+       --><li><a href="/archives/">归档</a></li><!--
+     -->
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+    </div>
+    <!-- styles -->
+
+
+
+  <link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" crossorigin="anonymous" onload="this.onload=null;this.rel='stylesheet'"/>
+
+
+    <!-- jquery -->
+ 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" crossorigin="anonymous"></script> 
+
+
+
+
+<!-- clipboard -->
+
+  
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.7/clipboard.min.js" crossorigin="anonymous"></script> 
+  
+  <script type="text/javascript">
+  $(function() {
+    // copy-btn HTML
+    var btn = "<span class=\"btn-copy tooltipped tooltipped-sw\" aria-label=\"复制到粘贴板!\">";
+    btn += '<i class="far fa-clone"></i>';
+    btn += '</span>'; 
+    // mount it!
+    $(".highlight table").before(btn);
+    var clip = new ClipboardJS('.btn-copy', {
+      text: function(trigger) {
+        return Array.from(trigger.nextElementSibling.querySelectorAll('.code')).reduce((str,it)=>str+it.innerText+'\n','')
+      }
+    });
+    clip.on('success', function(e) {
+      e.trigger.setAttribute('aria-label', "复制成功!");
+      e.clearSelection();
+    })
+  })
+  </script>
+
+
+<script src="/js/main.js"></script>
+
+<!-- search -->
+
+<!-- Google Analytics -->
+
+<!-- Baidu Analytics -->
+
+<!-- Cloudflare Analytics -->
+
+<!-- Umami Analytics -->
+
+<!-- Disqus Comments -->
+
+<!-- utterances Comments -->
+
+</body>
+</html>
