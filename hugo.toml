@@ -1,0 +1,5 @@
+baseURL = 'https://hanwinbi.github.io/'
+languageCode = 'en-us'
+title = "Hanwin's Blog"
+theme = "hugo-theme-nostyleplease"
+cleanDestinationDir = true
