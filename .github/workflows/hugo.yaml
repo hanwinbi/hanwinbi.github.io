@@ -34,6 +34,11 @@ jobs:
     env:
       HUGO_VERSION: 0.137.1
     steps:
+      - name: Checkout code with submodules
+        uses: actions/checkout@v3
+        with:
+          submodules: true  # 确保子模块也被拉取
+          fetch-depth: 0     # 确保获取完整的历史记录
       - name: Install Hugo CLI
         run: |
           wget -O ${{ runner.temp }}/hugo.deb https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_extended_${HUGO_VERSION}_linux-amd64.deb \
