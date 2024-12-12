@@ -1,4 +1,5 @@
-baseURL = 'https://example.org/'
+baseURL = 'https://hanwinbi.github.io/'
 languageCode = 'en-us'
-title = 'My New Hugo Site'
-theme = 'hugo-theme-nostyleplease'
+title = "Hanwin's Blog"
+theme = "hugo-theme-nostyleplease"
+cleanDestinationDir = true
